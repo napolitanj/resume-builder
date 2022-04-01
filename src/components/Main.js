@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PreviewMode from './PreviewMode'
 
 class Main extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Main extends Component {
         id: 1,
         firstName: 'Joe',
         lastName: 'Dirt',
+        title: "Front End Developer",
         address: '1234 Hillbilly Ln.',
         phone: '235-646-2423',
         email: 'joedirt@gmail.com',
@@ -107,7 +109,9 @@ class Main extends Component {
   }
   render() {
     return (
-      <div class="mainBody">Main</div>
+      <div className="mainBody"> 
+        <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
+      </div>
     )
   }
 }

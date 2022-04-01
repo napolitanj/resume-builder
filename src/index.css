@@ -22,7 +22,7 @@ body {
 }
 
 .mainBody {
-  padding: 30px;
+  padding: 15%;
   background-color: #6e8898ff;
   height: 70vh;
 }
@@ -33,4 +33,22 @@ body {
   gap: 10px;
   padding: 10px;
   background-color: #d3d0cbff;
+  box-shadow: black 5px 5px;
+}
+
+.previewWindow {
+  display: flex;
+  background-color: white;
+}
+
+.previewBody {
+  display: flex;
+}
+
+.previewMainBody {
+  width: 70%;
+}
+
+.previewSkillsBody {
+  width: 30%;
 }

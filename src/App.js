@@ -10,7 +10,7 @@ class App extends Component {
           <h1>Get a job.</h1>
           <h3>A CV-Application</h3>
         </header>
-        <Main />
+        <Main/>
         <footer className="footer">
           <h2>napolitanj 2022</h2>
         </footer>
