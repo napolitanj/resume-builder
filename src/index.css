@@ -1,0 +1,36 @@
+/*Color Palette: #2E5266ff, #6E8898FF, #9FB1BCFF, #D3D0CBFF*/
+
+body {
+  margin: 0px;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #2e5266ff;
+  color: white;
+  height: 10vh;
+}
+
+.header {
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.mainBody {
+  padding: 30px;
+  background-color: #6e8898ff;
+  height: 70vh;
+}
+
+.formWindow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #d3d0cbff;
+}
