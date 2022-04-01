@@ -38,17 +38,30 @@ body {
 
 .previewWindow {
   display: flex;
+  flex-direction: column;
   background-color: white;
+  padding: 10px;
+}
+
+.previewHeader {
+  height: auto;
 }
 
 .previewBody {
   display: flex;
+  gap: 10px;
 }
 
 .previewMainBody {
+  display: flex;
+  flex-direction: column;
   width: 70%;
 }
 
-.previewSkillsBody {
+.previewBodyElement {
+  height: auto;
+}
+
+.previewSecondaryBody {
   width: 30%;
 }

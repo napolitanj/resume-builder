@@ -9,9 +9,23 @@ class PreviewMode extends Component {
             <Header firstName={generalInfo.firstName} lastName={generalInfo.lastName} title={generalInfo.title} />
             <div className="previewBody">
                 <div className="previewMainBody">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
+                    <div className="previewBodyElement">
+                        <p>Experience</p>
+                        <hr></hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
+                    </div>
+                    <div className="previewBodyElement">
+                        <p>Employment</p>
+                        <hr></hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
+                    </div>
+                    <div className="previewBodyElement">
+                        <p>Education</p>
+                        <hr></hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
+                    </div>
                 </div>
-                <div className="previewSkillsBody">
+                <div className="previewSecondaryBody">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
                 </div>
             </div>
