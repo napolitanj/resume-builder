@@ -7,11 +7,11 @@ class Job extends Component {
       <div>
             <h3>{position}</h3>
             <div className="jobSubHeader">
-                <p>{employer}</p>
+                <p style={{fontSize:'14px', lineHeight:'1px'}}>{employer}</p>
                 <p>{start} - {end} | {location}</p>
             </div>
             {duties.map((duty) => (
-                <p className="duty">{duty}</p>
+                <li className="duty">{duty}</li>
             ))}
       </div>
     )
