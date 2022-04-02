@@ -43,10 +43,10 @@ class Main extends Component {
         {
           employer: "Gas Station",
           location: "CO",
-          position: "Attendant",
+          position: "Attendant - Slinger of Gas",
           start: "Nov 2018",
           end: "April 2021",
-          responsibilities: [
+          duties: [
             "Fill up gas for the people",
             "Sell candy bars and sodas / give people diabetes",
             "Devour tornados all day"
@@ -59,7 +59,7 @@ class Main extends Component {
           position: "Salesman",
           start: "Nov 2015",
           end: "April 2020",
-          responsibilities: [
+          duties: [
             "Learn about which shoes are the best",
             "Put them on people's feet",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia."

@@ -5,7 +5,7 @@ class ExperienceTopic extends Component {
       const {title, description} = this.props;
     return (
       <div className="experienceTopic">
-          <p>{title}</p>
+          <p className="experienceSubTitle">{title}</p>
           <p>{description}</p>
       </div>
     )

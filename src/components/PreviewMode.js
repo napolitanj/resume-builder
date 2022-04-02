@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './previewComponents/Header'
 import PreviewExperience from './previewComponents/PreviewExperience'
+import PreviewEmployment from './previewComponents/PreviewEmployment'
 
 class PreviewMode extends Component {
   render() {
@@ -24,7 +25,9 @@ class PreviewMode extends Component {
                     <div className="previewBodyElement">
                         <p>Employment</p>
                         <hr></hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
+                        <PreviewEmployment
+                        jobs={employmentInfo}
+                        />
                     </div>
                     <div className="previewBodyElement">
                         <p>Education</p>
