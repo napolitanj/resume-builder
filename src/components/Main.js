@@ -23,17 +23,17 @@ class Main extends Component {
         end: "Present",
         topics: [
           {
-            topic: "React",
+            title: "React",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.",
             id: Math.floor(Math.random() * 10000)+1
           },
           {
-            topic: "Javascript",
+            title: "Javascript",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.",
             id: Math.floor(Math.random() * 10000)+1
           },
           {
-            topic: "HTML/CSS",
+            title: "HTML/CSS",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.",
             id: Math.floor(Math.random() * 10000)+1
           }

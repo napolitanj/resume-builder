@@ -65,3 +65,13 @@ body {
 .previewSecondaryBody {
   width: 30%;
 }
+
+.experienceTitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.experienceTopic {
+  font-size: 12px;
+}

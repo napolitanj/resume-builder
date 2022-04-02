@@ -14,10 +14,11 @@ class PreviewMode extends Component {
                         <p>Experience</p>
                         <hr></hr>
                         <PreviewExperience 
-                        title={this.experience.title} 
-                        location={this.experience.location} 
-                        start={this.experience.start} 
-                        end={this.experience.end}
+                        title={experience.title} 
+                        location={experience.location} 
+                        start={experience.start} 
+                        end={experience.end}
+                        topics={experience.topics}
                         />
                     </div>
                     <div className="previewBodyElement">
