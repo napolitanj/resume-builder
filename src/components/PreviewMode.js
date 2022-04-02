@@ -3,6 +3,7 @@ import Header from './previewComponents/Header'
 import PreviewExperience from './previewComponents/PreviewExperience'
 import PreviewEmployment from './previewComponents/PreviewEmployment'
 import PreviewEducation from './previewComponents/PreviewEducation'
+import Skill from './previewComponents/Skill'
 
 
 class PreviewMode extends Component {
@@ -38,6 +39,7 @@ class PreviewMode extends Component {
                         <PreviewEducation
                         key = {edu.id} 
                         degree = {edu.degree}
+                        school = {edu.school}
                         location = {edu.location}
                         start = {edu.start}
                         end = {edu.end}
@@ -46,7 +48,26 @@ class PreviewMode extends Component {
                     </div>
                 </div>
                 <div className="previewSecondaryBody">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
+                    <div className="secondaryGeneralInfo">
+                        <p>{generalInfo.email}</p>
+                        <p>{generalInfo.phone}</p>
+                        <p>{generalInfo.city}</p>
+                    </div>
+                    <div>
+                        <p>Web</p>
+                        {generalInfo.websites.map((site) => (
+                            <p>{site}</p>
+                        ))}
+                    </div>
+                    <div className="skills">
+                        {skills.map((skill) => (
+                            <Skill 
+                            key={skill.id} 
+                            category={skill.category} 
+                            list={skill.skillList} 
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

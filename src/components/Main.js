@@ -11,7 +11,7 @@ class Main extends Component {
         firstName: 'Joe',
         lastName: 'Dirt',
         title: "Front End Developer",
-        address: '1234 Hillbilly Ln.',
+        city: 'Tuscon, AZ',
         phone: '235-646-2423',
         email: 'joedirt@gmail.com',
         websites: ["github.com/dirtyjoe", "www.shootfireworksatit.org"]
@@ -69,21 +69,24 @@ class Main extends Component {
       education: [
         {
           degree: "Full Stack Web Development",
+          school: "The Odin Project",
           location: "Remote",
           start: "Sept 2021",
           end: "Ongoing",
           id: Math.floor(Math.random() * 10000)+1
         },
         {
-          degree: "Full Stack Web Development",
-          location: "Remote",
+          degree: "B.S. Group Social Studies",
+          school: "Michigan State University",
+          location: "East Lansing, MI",
           start: "Sept 2021",
           end: "Ongoing",
           id: Math.floor(Math.random() * 10000)+1
         },
         {
-          degree: "Full Stack Web Development",
-          location: "Remote",
+          degree: "Leadership School",
+          school: "National Outdoor Leadership School",
+          location: "Lander, WY",
           start: "Sept 2021",
           end: "Ongoing",
           id: Math.floor(Math.random() * 10000)+1
