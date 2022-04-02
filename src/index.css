@@ -89,3 +89,9 @@ body {
 .duty {
   font-size: 12px;
 }
+
+.educationSubText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}

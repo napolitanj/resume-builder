@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Header from './previewComponents/Header'
 import PreviewExperience from './previewComponents/PreviewExperience'
 import PreviewEmployment from './previewComponents/PreviewEmployment'
+import PreviewEducation from './previewComponents/PreviewEducation'
+
 
 class PreviewMode extends Component {
   render() {
@@ -32,7 +34,15 @@ class PreviewMode extends Component {
                     <div className="previewBodyElement">
                         <p>Education</p>
                         <hr></hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia.</p>
+                        {education.map((edu) => (
+                        <PreviewEducation
+                        key = {edu.id} 
+                        degree = {edu.degree}
+                        location = {edu.location}
+                        start = {edu.start}
+                        end = {edu.end}
+                        />
+                        ))}
                     </div>
                 </div>
                 <div className="previewSecondaryBody">

@@ -15,7 +15,7 @@ class PreviewEmployment extends Component {
               start={job.start} 
               end={job.end} 
               duties={job.duties}
-              />
+              /> 
           ))}
       </div>
     )
