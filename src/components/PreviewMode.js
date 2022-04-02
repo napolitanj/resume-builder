@@ -15,7 +15,7 @@ class PreviewMode extends Component {
             <div className="previewBody">
                 <div className="previewMainBody">
                     <div className="previewBodyElement">
-                        <p>Experience</p>
+                        <p className="categoryHeader">Experience</p>
                         <hr></hr>
                         <PreviewExperience 
                         title={experience.title} 
@@ -26,14 +26,14 @@ class PreviewMode extends Component {
                         />
                     </div>
                     <div className="previewBodyElement">
-                        <p>Employment</p>
+                        <p className="categoryHeader">Employment</p>
                         <hr></hr>
                         <PreviewEmployment
                         jobs={employmentInfo}
                         />
                     </div>
                     <div className="previewBodyElement">
-                        <p>Education</p>
+                        <p className="categoryHeader">Education</p>
                         <hr></hr>
                         {education.map((edu) => (
                         <PreviewEducation

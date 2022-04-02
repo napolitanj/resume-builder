@@ -5,8 +5,8 @@ class Header extends Component {
       const {firstName, lastName, title} = this.props;
     return (
       <div className="previewHeader">
-          <p style={{fontSize:'24px', weight:700}}>{firstName}{' '}{lastName}</p>
-          <p style={{fontSize:'18px'}}>{title}</p>
+          <p style={{fontSize:'24px', fontWeight:700}}>{firstName}{' '}{lastName}</p>
+          <p style={{fontSize:'18px', fontWeight:400}}>{title}</p>
         </div>
     )
   }

@@ -5,6 +5,14 @@ body {
   font-family: "Merriweather", serif;
 }
 
+p {
+  font-size: 11px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
 .header,
 .footer {
   display: flex;
@@ -41,11 +49,15 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 20px;
+  padding: 48px;
+  padding-top: 38px;
+  width: 595px;
+  height: 842px;
 }
 
 .previewHeader {
   height: auto;
+  line-height: 8px;
 }
 
 .previewBody {
@@ -56,7 +68,8 @@ body {
 .previewMainBody {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 683px;
+  height: auto;
 }
 
 .previewBodyElement {
@@ -65,17 +78,25 @@ body {
 
 .previewSecondaryBody {
   font-size: 12px;
-  width: 30%;
+  width: 140px;
+}
+
+.categoryHeader {
+  font-size: 12px;
+  line-height: 1px;
 }
 
 .experienceTitle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 14px;
+  line-height: 0px;
 }
 
 .experienceSubTitle {
   font-size: 14px;
+  line-height: 1px;
 }
 
 .experienceTopic {
