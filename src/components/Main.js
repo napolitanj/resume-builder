@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PreviewMode from './PreviewMode'
+import EditMode from './EditMode'
+
 
 class Main extends Component {
   constructor(props) {
@@ -14,7 +16,7 @@ class Main extends Component {
         city: 'Tuscon, AZ',
         phone: '235-646-2423',
         email: 'joedirt@gmail.com',
-        websites: ["github.com/dirtyjoe", "www.shootfireworksatit.org"]
+        websites: ["github.com/dirtjoe", "www.shootfireworksatit.org"]
       },
       experience: {
         title: "The Odin Project",
@@ -47,9 +49,9 @@ class Main extends Component {
           start: "Nov 2018",
           end: "April 2021",
           duties: [
-            "Fill up gas for the people",
-            "Sell candy bars and sodas / give people diabetes",
-            "Devour tornados all day"
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Integer in aliquet metus, non fermentum arcu.",
+            "Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia."
           ],
           id: Math.floor(Math.random() * 10000)+1
         },
@@ -60,9 +62,9 @@ class Main extends Component {
           start: "Nov 2015",
           end: "April 2020",
           duties: [
-            "Learn about which shoes are the best",
-            "Put them on people's feet",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Integer in aliquet metus, non fermentum arcu.",
+            "Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia."
           ],
         },
       ],
@@ -100,13 +102,34 @@ class Main extends Component {
         {
           category: "Tools",
           skillList: ["Javascript ES6", "HTML", "CSS","Javascript ES6", "HTML", "CSS","Javascript ES6", "HTML", "CSS"]
+        },
+        {
+          category: "More Tools",
+          skillList: ["Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github","Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github"]
         },  
       ]
     }
   }
+
+  logFields = () => {
+    const {firstName} = this.state.generalInfo;
+    console.log({firstName})
+  }
+
+  handleChange = (e) => {
+    const {name,value} = e.target;
+    this.setState({
+      generalInfo: {
+        ...this.state.generalInfo,
+        [name]: value
+      }
+    });
+  }
+
   render() {
     return (
-      <div className="mainBody"> 
+      <div className="mainBody">
+        <EditMode handleChange={this.handleChange} generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/> 
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
       </div>
     )

@@ -34,7 +34,10 @@ h3 {
 .mainBody {
   padding: 15%;
   background-color: #6e8898ff;
-  height: 70%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .formWindow {
@@ -54,6 +57,13 @@ h3 {
   padding-top: 38px;
   width: 595px;
   height: 842px;
+  box-shadow: 5px 5px;
+}
+
+.editWindow {
+  height: 400px;
+  width: 300px;
+  background-color: white;
 }
 
 .previewHeader {
