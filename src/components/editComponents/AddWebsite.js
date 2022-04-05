@@ -20,13 +20,17 @@ class AddWebsite extends Component {
         }
 
         this.setState({url:''})
+        submitNew(this.state.url)
+        setAddWeb()
     }
 
     return (
       <div>
         <form onSubmit={onSubmit} className="addWeb">
             <input 
-            type="url" 
+            type="text"
+            pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+            title="mywebsite.com, www.mywebsite.org, https://website.net"    
             placeholder="Enter URL" 
             value={this.state.url} 
             onChange={(e) => this.setState({url:e.target.value})}
@@ -34,8 +38,7 @@ class AddWebsite extends Component {
             <input 
             style={{width:"50%"}} 
             type='submit' 
-            value='Add website' 
-            onClick={() => submitNew(this.state.url, setAddWeb())}
+            value='Submit' 
             />
         </form>
       </div>
