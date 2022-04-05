@@ -19,7 +19,8 @@ class EditGeneral extends Component {
             <input name="phone" onChange={(e) => changeGeneral(e)}></input>
             <p>Email</p>
             <input name="email" onChange={(e) => changeGeneral(e)}></input>
-
+            <button>Add Web</button>
+            <AddWebsite></AddWebsite>
         </div>
     )
   }
