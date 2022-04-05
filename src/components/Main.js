@@ -116,7 +116,8 @@ class Main extends Component {
     console.log({firstName})
   }
 
-  handleChange = (e) => {
+  //generalInfo Change
+  changeGeneral = (e) => {
     const {name,value} = e.target;
     this.setState({
       generalInfo: {
@@ -126,10 +127,54 @@ class Main extends Component {
     });
   }
 
+  //experience Change
+  changeExperience = (e) => {
+    const {name,value} = e.target;
+    this.setState({
+      experience: {
+        ...this.state.experience,
+        [name]: value
+      }
+    });
+  }
+
+  //employmentInfo Change
+  changeEmployment = (e) => {
+    const {name,value} = e.target;
+    this.setState({
+      employmentInfo: {
+        ...this.state.employmentInfo,
+        [name]: value
+      }
+    });
+  }
+
+  //education Change
+  changeEducation = (e) => {
+    const {name,value} = e.target;
+    this.setState({
+      education: {
+        ...this.state.education,
+        [name]: value
+      }
+    });
+  }
+
+  //skills Change
+  changeSkills = (e) => {
+    const {name,value} = e.target;
+    this.setState({
+      skills: {
+        ...this.state.skills,
+        [name]: value
+      }
+    });
+  }
+
   render() {
     return (
       <div className="mainBody">
-        <EditMode handleChange={this.handleChange} generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/> 
+        <EditMode changeGeneral={this.changeGeneral} generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/> 
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
       </div>
     )

@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
-import Input from './editComponents/Input'
+import EditGeneral from './editComponents/EditGeneral'
+
 
 class EditMode extends Component {
 
     render() {
-      const {handleChange, generalInfo, experience, employmentInfo, education, skills} = this.props
+      const {changeGeneral, experience, employmentInfo, education, skills} = this.props
       return (
         <div className="editWindow">
-        <h2>General Info</h2>
-            <p>First Name</p>
-            <input name="firstName" onChange={(e) => handleChange(e)}></input>
+            <EditGeneral changeGeneral={changeGeneral}></EditGeneral>
         </div>
       )
     }

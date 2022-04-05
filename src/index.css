@@ -32,7 +32,7 @@ h3 {
 }
 
 .mainBody {
-  padding: 15%;
+  padding: 2%;
   background-color: #6e8898ff;
   height: auto;
   display: flex;
@@ -55,14 +55,16 @@ h3 {
   background-color: white;
   padding: 48px;
   padding-top: 38px;
-  width: 595px;
-  height: 842px;
+  width: 60%;
+  height: auto;
   box-shadow: 5px 5px;
 }
 
 .editWindow {
-  height: 400px;
-  width: 300px;
+  height: 40%;
+  width: 25%;
+  padding: 10px;
+  border-radius: 10px;
   background-color: white;
 }
 
