@@ -113,6 +113,7 @@ class Main extends Component {
     }
   }
 
+  //Delete later
   logFields = () => {
     const {firstName} = this.state.generalInfo;
     console.log({firstName})
@@ -132,6 +133,15 @@ class Main extends Component {
   setAddWeb = () => {
     this.setState(prevState => ({
       addWebsite: !prevState.addWebsite
+    }))
+  }
+
+  submitNewWebsite = (newSite, callback) => {
+    this.setState(prevState => ({
+      generalInfo: {
+        ...prevState.generalInfo,
+        websites: [...prevState.generalInfo.websites, newSite]
+      }
     }))
   }
 
@@ -182,7 +192,12 @@ class Main extends Component {
   render() {
     return (
       <div className="mainBody">
-        <EditMode mainProps={this.state} setAddWeb={this.setAddWeb} changeGeneral={this.changeGeneral}  experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/> 
+        <EditMode 
+        mainProps={this.state} 
+        setAddWeb={this.setAddWeb} 
+        changeGeneral={this.changeGeneral}
+        submitNewWebsite={this.submitNewWebsite}
+        /> 
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
       </div>
     )

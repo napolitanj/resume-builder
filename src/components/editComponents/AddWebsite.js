@@ -9,7 +9,7 @@ class AddWebsite extends Component {
     }
 
   render() {
-    const {submitWeb} = this.props;
+    const {websites, submitNew, setAddWeb} = this.props;
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -18,19 +18,25 @@ class AddWebsite extends Component {
             alert("Please enter a web address")
             return
         }
-        submitWeb(this.state)
 
         this.setState({url:''})
     }
 
     return (
       <div>
-        <form onSubmit={onSubmit}>
-            <label>
-                Wesbite
-            </label>
-            <input type="email" placeholder="Enter URL" value={this.state.url} onChange={(e) => this.setState({url:e.target.value})}></input>
-            <input type='submit' value='Add website' />
+        <form onSubmit={onSubmit} className="addWeb">
+            <input 
+            type="url" 
+            placeholder="Enter URL" 
+            value={this.state.url} 
+            onChange={(e) => this.setState({url:e.target.value})}
+            />
+            <input 
+            style={{width:"50%"}} 
+            type='submit' 
+            value='Add website' 
+            onClick={() => submitNew(this.state.url, setAddWeb())}
+            />
         </form>
       </div>
     )

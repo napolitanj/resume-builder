@@ -3,9 +3,9 @@ import AddWebsite from './AddWebsite'
 
 class EditGeneral extends Component {
   render() {
-      const {changeGeneral, addWeb, setAddWeb} = this.props;
+      const {changeGeneral, addWeb, setAddWeb, websites, submitNewWebsite} = this.props;
     return (
-        <div className="editWindow">
+        <div>
         <h2>General Info</h2>
             <p>First Name</p>
             <input name="firstName" onChange={(e) => changeGeneral(e)}></input>
@@ -19,8 +19,18 @@ class EditGeneral extends Component {
             <input name="phone" onChange={(e) => changeGeneral(e)}></input>
             <p>Email</p>
             <input name="email" onChange={(e) => changeGeneral(e)}></input>
-            <button onClick={() => setAddWeb()}>Add Web</button>
-            {addWeb && <AddWebsite></AddWebsite>}
+            <hr></hr>
+            <p style={{fontWeight:"700"}}>Web pages:</p>
+            {websites.map(site => <p>{site}</p>)}
+            <hr></hr>
+            <div style={{marginTop:"20px"}}>
+              <button onClick={() => setAddWeb()}>Add a website</button>
+              {addWeb && <AddWebsite 
+              websites={websites} 
+              submitNew={submitNewWebsite}
+              setAddWeb={setAddWeb}
+              />}
+            </div>
         </div>
     )
   }
