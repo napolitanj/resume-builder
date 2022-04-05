@@ -3,7 +3,7 @@ import AddWebsite from './AddWebsite'
 
 class EditGeneral extends Component {
   render() {
-      const {changeGeneral} = this.props;
+      const {changeGeneral, addWeb, setAddWeb} = this.props;
     return (
         <div className="editWindow">
         <h2>General Info</h2>
@@ -19,8 +19,8 @@ class EditGeneral extends Component {
             <input name="phone" onChange={(e) => changeGeneral(e)}></input>
             <p>Email</p>
             <input name="email" onChange={(e) => changeGeneral(e)}></input>
-            <button>Add Web</button>
-            <AddWebsite></AddWebsite>
+            <button onClick={() => setAddWeb()}>Add Web</button>
+            {addWeb && <AddWebsite></AddWebsite>}
         </div>
     )
   }

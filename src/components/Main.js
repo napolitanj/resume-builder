@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import PreviewMode from './PreviewMode'
 import EditMode from './EditMode'
@@ -9,6 +10,7 @@ class Main extends Component {
     this.state = {
       //editMode false is preview mode, editMode true is editMode
       editMode: false,
+      addWebsite:false,
       generalInfo: {
         firstName: 'Joe',
         lastName: 'Dirt',
@@ -127,6 +129,12 @@ class Main extends Component {
     });
   }
 
+  setAddWeb = () => {
+    this.setState(prevState => ({
+      addWebsite: !prevState.addWebsite
+    }))
+  }
+
   //experience Change
   changeExperience = (e) => {
     const {name,value} = e.target;
@@ -174,7 +182,7 @@ class Main extends Component {
   render() {
     return (
       <div className="mainBody">
-        <EditMode changeGeneral={this.changeGeneral} generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/> 
+        <EditMode mainProps={this.state} setAddWeb={this.setAddWeb} changeGeneral={this.changeGeneral}  experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/> 
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
       </div>
     )

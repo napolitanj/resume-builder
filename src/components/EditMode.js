@@ -5,10 +5,10 @@ import EditGeneral from './editComponents/EditGeneral'
 class EditMode extends Component {
 
     render() {
-      const {changeGeneral, experience, employmentInfo, education, skills} = this.props
+      const {changeGeneral, mainProps, setAddWeb} = this.props
       return (
         <div className="editWindow">
-            <EditGeneral changeGeneral={changeGeneral}></EditGeneral>
+            <EditGeneral changeGeneral={changeGeneral} addWeb={mainProps.addWebsite} setAddWeb={setAddWeb}></EditGeneral>
         </div>
       )
     }
