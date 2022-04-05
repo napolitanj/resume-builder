@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import uniqid from 'uniqid'
 
 class AddWebsite extends Component {
     constructor(props) {
         super(props);
         this.state={
-            url: ''
+            url: '',
+            id: uniqid()
         }
     }
 

@@ -18,7 +18,12 @@ class Main extends Component {
         city: 'Tuscon, AZ',
         phone: '235-646-2423',
         email: 'joedirt@gmail.com',
-        websites: ["github.com/dirtjoe", "www.shootfireworksatit.org"]
+        websites: [
+          {
+            id:1,
+            text: "www.joedirt.com"
+          }
+        ]
       },
       experience: {
         title: "The Odin Project",
@@ -145,6 +150,15 @@ class Main extends Component {
     }))
   }
 
+  deleteWebsite = (id) => {
+    this.setState(prevState => ({
+      generalInfo: {
+        ...prevState.generalInfo,
+        websites: [...prevState.generalInfo.websites.filter((website) => website.id !== id)]
+      }
+    }))
+  }
+
   //experience Change
   changeExperience = (e) => {
     const {name,value} = e.target;
@@ -197,6 +211,7 @@ class Main extends Component {
         setAddWeb={this.setAddWeb} 
         changeGeneral={this.changeGeneral}
         submitNewWebsite={this.submitNewWebsite}
+        deleteWebsite={this.deleteWebsite}
         /> 
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
       </div>

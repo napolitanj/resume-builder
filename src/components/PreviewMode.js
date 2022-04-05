@@ -56,7 +56,7 @@ class PreviewMode extends Component {
                     <div>
                         <p style={{fontWeight:700}}>Web</p>
                         {generalInfo.websites.map((site) => (
-                            <p>{site}</p>
+                            <p>{site.text}</p>
                         ))}
                     </div>
                     <div className="skills">
