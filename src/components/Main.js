@@ -1,7 +1,8 @@
-
 import React, { Component } from 'react'
 import PreviewMode from './PreviewMode'
 import EditMode from './EditMode'
+import EditTab from './editComponents/EditTab'
+
 
 
 class Main extends Component {
@@ -11,6 +12,7 @@ class Main extends Component {
       //editMode false is preview mode, editMode true is editMode
       editMode: false,
       addWebsite:false,
+      activeTab:2,
       generalInfo: {
         firstName: 'Joe',
         lastName: 'Dirt',
@@ -124,6 +126,10 @@ class Main extends Component {
     console.log({firstName})
   }
 
+  changeTab = () => {
+
+  }
+
   //generalInfo Change
   changeGeneral = (e) => {
     const {name,value} = e.target;
@@ -206,13 +212,22 @@ class Main extends Component {
   render() {
     return (
       <div className="mainBody">
-        <EditMode 
-        mainProps={this.state} 
-        setAddWeb={this.setAddWeb} 
-        changeGeneral={this.changeGeneral}
-        submitNewWebsite={this.submitNewWebsite}
-        deleteWebsite={this.deleteWebsite}
-        /> 
+        <div>
+          <div className="editTabs">
+            <EditTab tabName={"Gen"} />
+            <EditTab tabName={"Exp"} />
+            <EditTab tabName={"Emp"} />
+            <EditTab tabName={"Edu"} />
+            <EditTab tabName={"Skil"} />
+          </div>
+            <EditMode 
+              mainProps={this.state} 
+              setAddWeb={this.setAddWeb} 
+              changeGeneral={this.changeGeneral}
+              submitNewWebsite={this.submitNewWebsite}
+              deleteWebsite={this.deleteWebsite}
+            /> 
+        </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
       </div>
     )

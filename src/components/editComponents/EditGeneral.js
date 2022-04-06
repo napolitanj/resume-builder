@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import AddWebsite from './AddWebsite'
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes} from 'react-icons/fa'
 
 class EditGeneral extends Component {
   render() {
       const {changeGeneral, addWeb, setAddWeb, websites, submitNewWebsite, deleteWebsite} = this.props;
     return (
-        <div>
-        <h2>General Info</h2>
+      <div>
+          <h2>General Info</h2>
             <p>First Name</p>
             <input name="firstName" onChange={(e) => changeGeneral(e)}></input>
             <p>Last Name</p>
@@ -22,7 +22,7 @@ class EditGeneral extends Component {
             <input name="email" onChange={(e) => changeGeneral(e)}></input>
             <hr></hr>
             <p style={{fontWeight:"700"}}>Web pages</p>
-              {websites.map(site => <p>{site.text} 
+            {websites.map(site => <p>{site.text} 
               <FaTimes 
               style={{color:'gray',cursor:'pointer'}} 
               onClick={() => deleteWebsite(site.id)}

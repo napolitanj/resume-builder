@@ -63,12 +63,39 @@ h3 {
 .editWindow {
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: auto;
   width: auto;
   padding: 10px;
   gap: 10px;
-  border-radius: 10px;
+  line-height: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   background-color: white;
+}
+
+.editTabs {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  gap: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: solid black 2px;
+}
+
+.editTab {
+  padding: 5px;
+  padding-bottom: 2px;
+}
+
+.editTab:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.editTabActive {
+  background-color: black;
+  color: white;
 }
 
 .addWeb {
