@@ -8,7 +8,9 @@ class PreviewExperience extends Component {
       <div>
             <div className="experienceTitle">
                 <h3>{title}</h3>
-                <p>{start} - {end} | {location}</p>
+                <div style={{overflowWrap:"wrap", textAlign:"right", lineHeight:"auto"}}>
+                  <p>{start} - {end} | {location}</p>
+                </div>
             </div>
             <div>
                 {topics.map((topic) => (

@@ -12,7 +12,8 @@ class EditMode extends Component {
         deleteWebsite,
         editCategory,
         editTopicTitle,
-        editTopicDescription
+        editTopicDescription,
+        editExperience
       } = this.props
 
       if (mainProps.activeTab === 1) {
@@ -31,10 +32,11 @@ class EditMode extends Component {
           return (
           <div className="editWindow">
             <EditExperience
-            topics={mainProps.experience.topics}
+            experienceProps={mainProps.experience}
             editCategory={editCategory}
             editTopicTitle={editTopicTitle}
             editTopicDescription={editTopicDescription}
+            editExperience={editExperience}
             />
           </div>
       )}

@@ -126,7 +126,7 @@ class Main extends Component {
     console.log({firstName})
   }
 
-  //generalInfo Change
+  //GeneralInfo Editting
   changeGeneral = (e) => {
     const {name,value} = e.target;
     this.setState({
@@ -136,47 +136,6 @@ class Main extends Component {
       }
     });
   }
-
-  //experienceTopic Change
-  editTopicTitle = (e, id) => {
-    const allPreviousTopics = [...this.state.experience.topics]
-    const getArray = allPreviousTopics.filter(topic => {
-      if (topic.id === id)
-      return topic
-    })
-    const objectToBeModified = getArray[0]
-    const getIndex = allPreviousTopics.indexOf(objectToBeModified)
-    objectToBeModified.title = e.target.value
-    allPreviousTopics[getIndex] = objectToBeModified
-
-    this.setState({
-      experience: {
-        ...this.state.experience,
-        topics: allPreviousTopics
-      }
-    })
-  }
-
-  //experienceDescription Change
-  editTopicDescription = (e, id) => {
-    const allPreviousTopics = [...this.state.experience.topics]
-    const getArray = allPreviousTopics.filter(topic => {
-      if (topic.id === id)
-      return topic
-    })
-    const objectToBeModified = getArray[0]
-    const getIndex = allPreviousTopics.indexOf(objectToBeModified)
-    objectToBeModified.description = e.target.value
-    allPreviousTopics[getIndex] = objectToBeModified
-
-    this.setState({
-      experience: {
-        ...this.state.experience,
-        topics: allPreviousTopics
-      }
-    })
-  }
-
   setAddWeb = () => {
     this.setState(prevState => ({
       addWebsite: !prevState.addWebsite
@@ -198,8 +157,9 @@ class Main extends Component {
       }
     }))
   }
-  //experience Change
-  changeExperience = (e) => {
+
+  //Experience editting
+  editExperience = (e) => {
     const {name,value} = e.target;
     this.setState({
       experience: {
@@ -208,6 +168,45 @@ class Main extends Component {
       }
     });
   }
+  editTopicTitle = (e, id) => {
+    const allPreviousTopics = [...this.state.experience.topics]
+    const getArray = allPreviousTopics.filter(topic => {
+      if (topic.id === id)
+      return topic
+    })
+    const objectToBeModified = getArray[0]
+    const getIndex = allPreviousTopics.indexOf(objectToBeModified)
+    objectToBeModified.title = e.target.value
+    allPreviousTopics[getIndex] = objectToBeModified
+
+    this.setState({
+      experience: {
+        ...this.state.experience,
+        topics: allPreviousTopics
+      }
+    })
+  }
+  editTopicDescription = (e, id) => {
+    const allPreviousTopics = [...this.state.experience.topics]
+    const getArray = allPreviousTopics.filter(topic => {
+      if (topic.id === id)
+      return topic
+    })
+    const objectToBeModified = getArray[0]
+    const getIndex = allPreviousTopics.indexOf(objectToBeModified)
+    objectToBeModified.description = e.target.value
+    allPreviousTopics[getIndex] = objectToBeModified
+
+    this.setState({
+      experience: {
+        ...this.state.experience,
+        topics: allPreviousTopics
+      }
+    })
+  }
+  
+
+
   //employmentInfo Change
   changeEmployment = (e) => {
     const {name,value} = e.target;
@@ -239,6 +238,8 @@ class Main extends Component {
     });
   }
 
+
+  
   render() {
     return (
       <div className="mainBody">
@@ -259,6 +260,7 @@ class Main extends Component {
               editCategory={this.editCategory}
               editTopicTitle={this.editTopicTitle}
               editTopicDescription={this.editTopicDescription}
+              editExperience={this.editExperience}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
