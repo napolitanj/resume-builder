@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 
 class EditTab extends Component {
   render() {
-      const {tabName} = this.props
+      const {tabName, editCategory} = this.props
     return (
-      <div className="editTab">{tabName}</div>
+        <div>
+            <div className="editTab" onClick={() => editCategory()}>{tabName}</div>
+        </div>
     )
   }
 }

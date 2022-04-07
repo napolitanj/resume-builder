@@ -126,10 +126,6 @@ class Main extends Component {
     console.log({firstName})
   }
 
-  changeTab = () => {
-
-  }
-
   //generalInfo Change
   changeGeneral = (e) => {
     const {name,value} = e.target;
@@ -139,6 +135,25 @@ class Main extends Component {
         [name]: value
       }
     });
+  }
+
+  //experienceTopic Change
+  editTopicTitle = (e, id) => {
+    const allPreviousTopics = [...this.state.experience.topics]
+    const getArray = allPreviousTopics.filter(topic => {
+      if (topic.id === id)
+      return topic
+    })
+    const objectToBeModified = getArray[0]
+    const getIndex = allPreviousTopics.indexOf(objectToBeModified)
+    objectToBeModified.title = e.target.value
+    allPreviousTopics[getIndex] = objectToBeModified
+
+    this.setState({
+      experience: {
+        topics: allPreviousTopics
+      }
+    })
   }
 
   setAddWeb = () => {
@@ -164,6 +179,8 @@ class Main extends Component {
       }
     }))
   }
+
+
 
   //experience Change
   changeExperience = (e) => {
@@ -226,6 +243,8 @@ class Main extends Component {
               changeGeneral={this.changeGeneral}
               submitNewWebsite={this.submitNewWebsite}
               deleteWebsite={this.deleteWebsite}
+              editCategory={this.editCategory}
+              editTopicTitle={this.editTopicTitle}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>

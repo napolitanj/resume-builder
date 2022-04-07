@@ -9,14 +9,16 @@ class EditMode extends Component {
         mainProps, 
         setAddWeb, 
         submitNewWebsite, 
-        deleteWebsite
+        deleteWebsite,
+        editCategory,
+        editTopicTitle
       } = this.props
 
       if (mainProps.activeTab === 1) {
         return (
           <div className="editWindow">
-              <EditGeneral 
-              websites={mainProps.generalInfo.websites} 
+              <EditGeneral
+              general={mainProps.generalInfo} 
               changeGeneral={changeGeneral} 
               addWeb={mainProps.addWebsite} 
               setAddWeb={setAddWeb}
@@ -28,7 +30,9 @@ class EditMode extends Component {
           return (
           <div className="editWindow">
             <EditExperience
-            topics={mainProps.experience.topics} 
+            topics={mainProps.experience.topics}
+            editCategory={editCategory}
+            editTopicTitle={editTopicTitle}
             />
           </div>
       )}

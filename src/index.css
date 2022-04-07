@@ -175,3 +175,19 @@ h3 {
   font-size: 12px;
   line-height: 0px;
 }
+
+.editExpCategory {
+  font-family: "Merriweather", serif;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.expInput {
+  font-family: "Merriweather", serif;
+  font-size: 12px;
+  display: block;
+  resize: vertical;
+  overflow: hidden;
+  min-height: 40px;
+}
