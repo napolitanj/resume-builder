@@ -151,6 +151,7 @@ class Main extends Component {
 
     this.setState({
       experience: {
+        ...this.state.experience,
         topics: allPreviousTopics
       }
     })
