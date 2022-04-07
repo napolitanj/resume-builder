@@ -3,8 +3,6 @@ import PreviewMode from './PreviewMode'
 import EditMode from './EditMode'
 import EditTab from './editComponents/EditTab'
 
-
-
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -52,6 +50,7 @@ class Main extends Component {
       },
       employmentInfo:[
         {
+          id: Math.floor(Math.random() * 10000)+1,
           employer: "Gas Station",
           location: "CO",
           position: "Attendant - Slinger of Gas",
@@ -61,10 +60,10 @@ class Main extends Component {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "Integer in aliquet metus, non fermentum arcu.",
             "Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia."
-          ],
-          id: Math.floor(Math.random() * 10000)+1
+          ]
         },
         {
+          id: Math.floor(Math.random() * 10000)+1,
           employer: "Shoe-topia",
           location: "Santa Fe, NM",
           position: "Salesman",
@@ -158,7 +157,7 @@ class Main extends Component {
     }))
   }
 
-  //Experience editting
+  //Experience Editting
   editExperience = (e) => {
     const {name,value} = e.target;
     this.setState({
@@ -205,18 +204,31 @@ class Main extends Component {
     })
   }
   
+  //Employment Editting
+  editEmployment = (e, id, jobProp) => {
+    const previousEmployment = [...this.state.employmentInfo]
+    const getArray = previousEmployment.filter(job => {
+      if (job.id === id)
+      return job
+    })
+    const jobToModify = getArray[0]
+    const getIndex = previousEmployment.indexOf(jobToModify)
+    const getKey = Object.keys(jobToModify).filter(key => {
+      if (key === jobProp)
+      return key
+    })
+    jobToModify[getKey[0]] = e.target.value
+    previousEmployment[getIndex] = jobToModify
 
-
-  //employmentInfo Change
-  changeEmployment = (e) => {
-    const {name,value} = e.target;
     this.setState({
-      employmentInfo: {
-        ...this.state.employmentInfo,
-        [name]: value
+      employment: {
+        previousEmployment
       }
-    });
+    })
   }
+
+
+
   //education Change
   changeEducation = (e) => {
     const {name,value} = e.target;
@@ -261,6 +273,7 @@ class Main extends Component {
               editTopicTitle={this.editTopicTitle}
               editTopicDescription={this.editTopicDescription}
               editExperience={this.editExperience}
+              editEmployment={this.editEmployment}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>

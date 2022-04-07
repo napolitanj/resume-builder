@@ -15,7 +15,8 @@ class EditMode extends Component {
         editCategory,
         editTopicTitle,
         editTopicDescription,
-        editExperience
+        editExperience,
+        editEmployment
       } = this.props
 
       if (mainProps.activeTab === 1) {
@@ -45,7 +46,9 @@ class EditMode extends Component {
         return (
           <div className="editWindow">
             <EditEmployment 
-            employmentProps={mainProps.employmentInfo}/>
+            mainProps={mainProps}
+            editEmployment={editEmployment}
+            />
           </div>
         )
       }
