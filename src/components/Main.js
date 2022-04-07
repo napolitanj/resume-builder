@@ -157,12 +157,31 @@ class Main extends Component {
     })
   }
 
+  //experienceDescription Change
+  editTopicDescription = (e, id) => {
+    const allPreviousTopics = [...this.state.experience.topics]
+    const getArray = allPreviousTopics.filter(topic => {
+      if (topic.id === id)
+      return topic
+    })
+    const objectToBeModified = getArray[0]
+    const getIndex = allPreviousTopics.indexOf(objectToBeModified)
+    objectToBeModified.description = e.target.value
+    allPreviousTopics[getIndex] = objectToBeModified
+
+    this.setState({
+      experience: {
+        ...this.state.experience,
+        topics: allPreviousTopics
+      }
+    })
+  }
+
   setAddWeb = () => {
     this.setState(prevState => ({
       addWebsite: !prevState.addWebsite
     }))
   }
-
   submitNewWebsite = (newSite, callback) => {
     this.setState(prevState => ({
       generalInfo: {
@@ -171,7 +190,6 @@ class Main extends Component {
       }
     }))
   }
-
   deleteWebsite = (id) => {
     this.setState(prevState => ({
       generalInfo: {
@@ -180,9 +198,6 @@ class Main extends Component {
       }
     }))
   }
-
-
-
   //experience Change
   changeExperience = (e) => {
     const {name,value} = e.target;
@@ -193,7 +208,6 @@ class Main extends Component {
       }
     });
   }
-
   //employmentInfo Change
   changeEmployment = (e) => {
     const {name,value} = e.target;
@@ -204,7 +218,6 @@ class Main extends Component {
       }
     });
   }
-
   //education Change
   changeEducation = (e) => {
     const {name,value} = e.target;
@@ -215,7 +228,6 @@ class Main extends Component {
       }
     });
   }
-
   //skills Change
   changeSkills = (e) => {
     const {name,value} = e.target;
@@ -246,6 +258,7 @@ class Main extends Component {
               deleteWebsite={this.deleteWebsite}
               editCategory={this.editCategory}
               editTopicTitle={this.editTopicTitle}
+              editTopicDescription={this.editTopicDescription}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>

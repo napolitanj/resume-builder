@@ -11,7 +11,8 @@ class EditMode extends Component {
         submitNewWebsite, 
         deleteWebsite,
         editCategory,
-        editTopicTitle
+        editTopicTitle,
+        editTopicDescription
       } = this.props
 
       if (mainProps.activeTab === 1) {
@@ -33,6 +34,7 @@ class EditMode extends Component {
             topics={mainProps.experience.topics}
             editCategory={editCategory}
             editTopicTitle={editTopicTitle}
+            editTopicDescription={editTopicDescription}
             />
           </div>
       )}

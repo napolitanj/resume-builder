@@ -4,7 +4,7 @@ import { FaTimes} from 'react-icons/fa'
 
 class EditExperience extends Component {
   render() {
-      const {changeExperience, topics, editTopicTitle, changeTopicDescription} = this.props;
+      const {changeExperience, topics, editTopicTitle, editTopicDescription} = this.props;
     return (
       <div>
           <h2>Experience</h2>
@@ -26,7 +26,7 @@ class EditExperience extends Component {
                             style={{color:'gray',cursor:'pointer'}} 
                         />
                     </div>
-                    <textarea key={topic.id} type="text" className="expInput" defaultValue={topic.description}></textarea>
+                    <textarea type="text" className="expInput" defaultValue={topic.description} onChange={(e) => editTopicDescription(e,topic.id)}></textarea>
                     <hr></hr>
                 </div>
             )}
