@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import EditGeneral from './editComponents/EditGeneral'
 import EditExperience from './editComponents/EditExperience'
+import EditEmployment from './editComponents/EditEmployment'
+
 
 class EditMode extends Component {
     render() {
@@ -28,7 +30,7 @@ class EditMode extends Component {
               deleteWebsite={deleteWebsite}
               />
           </div>
-        )} else {
+        )} else if (mainProps.activeTab === 2) {
           return (
           <div className="editWindow">
             <EditExperience
@@ -39,7 +41,14 @@ class EditMode extends Component {
             editExperience={editExperience}
             />
           </div>
-      )}
+      )} else if (mainProps.activeTab === 3) {
+        return (
+          <div className="editWindow">
+            <EditEmployment 
+            employmentProps={mainProps.employmentInfo}/>
+          </div>
+        )
+      }
     }
 }
 

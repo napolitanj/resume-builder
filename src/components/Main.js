@@ -12,7 +12,7 @@ class Main extends Component {
       //editMode false is preview mode, editMode true is editMode
       editMode: false,
       addWebsite:false,
-      activeTab:2,
+      activeTab:3,
       generalInfo: {
         firstName: 'Joe',
         lastName: 'Dirt',
@@ -239,7 +239,7 @@ class Main extends Component {
   }
 
 
-  
+
   render() {
     return (
       <div className="mainBody">
