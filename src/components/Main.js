@@ -246,9 +246,18 @@ class Main extends Component {
     const textToFilter = previousEmployment[parent].duties[index]
     const filteredEmployment = previousEmployment[parent].duties.filter(duty => duty !== textToFilter)
     previousEmployment[parent].duties = filteredEmployment
-    console.log(previousEmployment[parent].duties) 
     this.setState({
       employment : {
+        previousEmployment
+      }
+    })
+  }
+  addNewDuty = (index) => {
+    const previousEmployment = this.state.employmentInfo
+    previousEmployment[index].duties.push('')
+    console.log(this.state)
+    this.setState({
+      employment: {
         previousEmployment
       }
     })
@@ -302,6 +311,7 @@ class Main extends Component {
               editEmployment={this.editEmployment}
               editDuty={this.editDuty}
               deleteDuty={this.deleteDuty}
+              addNewDuty={this.addNewDuty}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>

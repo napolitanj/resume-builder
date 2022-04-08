@@ -3,7 +3,7 @@ import { FaTimes} from 'react-icons/fa'
 
 class EditEmployment extends Component {
     render() {
-        const {mainProps, editEmployment, editDuty, deleteDuty} = this.props;
+        const {mainProps, editEmployment, editDuty, deleteDuty, addNewDuty} = this.props;
       return (
         <div>
             <h2>Employment</h2>
@@ -26,8 +26,8 @@ class EditEmployment extends Component {
                     <p>End (month and year)</p>
                     <input type="text" maxLength="14" defaultValue={job.end} onChange={(e) => editEmployment(e,job.id, 'end')}></input>
                     <div style={{display:"flex", alignItems:"center", gap:"5px"}}>
-                        <p>Duties</p>
-                        <p style={{color:'gray',cursor:'pointer'}}>+ Add New</p>
+                        <p >Duties</p>
+                        <p style={{color:'gray',cursor:'pointer'}} onClick={() => addNewDuty(mainProps.employmentInfo.indexOf(job))}>+ Add New</p>
                     </div>
                     {job.duties.map(duty =>
                     <div key={duty} style={{display:"flex", alignItems:"center", gap:"5px"}}>
