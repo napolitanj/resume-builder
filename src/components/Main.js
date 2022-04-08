@@ -253,7 +253,6 @@ class Main extends Component {
   addNewDuty = (index) => {
     const previousEmployment = this.state.employmentInfo
     previousEmployment[index].duties.push('')
-    console.log(this.state)
     this.setState({
       employment: {
         previousEmployment
@@ -289,11 +288,17 @@ class Main extends Component {
     previousEducation.splice(index,1)
     console.log(previousEducation)
     this.setState({
-      education:
-      previousEducation
+      education: previousEducation
     })
   }
-
+  addNewEducation = (index) => {
+    const previousEducation = this.state.education
+    previousEducation.push([])
+    console.log(previousEducation, index)
+    this.setState({
+      education: previousEducation
+    })
+  }
 
 
   //skills Change
@@ -337,6 +342,7 @@ class Main extends Component {
               deleteJob={this.deleteJob}
               editEducation={this.editEducation}
               deleteEducation={this.deleteEducation}
+              addNewEducation={this.addNewEducation}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>

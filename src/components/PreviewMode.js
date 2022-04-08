@@ -36,8 +36,7 @@ class PreviewMode extends Component {
                         <p className="categoryHeader">Education</p>
                         <hr></hr>
                         {education.map((edu) => (
-                        <PreviewEducation
-                        key = {edu.id} 
+                        <PreviewEducation 
                         degree = {edu.degree}
                         school = {edu.school}
                         location = {edu.location}

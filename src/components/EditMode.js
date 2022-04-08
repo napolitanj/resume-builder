@@ -4,8 +4,6 @@ import EditExperience from './editComponents/EditExperience'
 import EditEmployment from './editComponents/EditEmployment'
 import EditEducation from './editComponents/EditEducation'
 
-
-
 class EditMode extends Component {
     render() {
       const {
@@ -24,7 +22,8 @@ class EditMode extends Component {
         addNewDuty,
         deleteJob,
         editEducation,
-        deleteEducation
+        deleteEducation,
+        addNewEducation
       } = this.props
 
       if (mainProps.activeTab === 1) {
@@ -72,6 +71,7 @@ class EditMode extends Component {
             mainProps={mainProps}
             editEducation={editEducation}
             deleteEducation={deleteEducation}
+            addNewEducation={addNewEducation}
             />
           </div>
       )}

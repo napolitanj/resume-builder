@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 
 class EditEducation extends Component {
   render() {
-      const {mainProps, editEducation, deleteEducation} = this.props
+      const {mainProps, editEducation, deleteEducation, addNewEducation} = this.props
     return (
       <div>
         <h2>Education</h2>
+        <h3 onClick={() => addNewEducation(mainProps.education)}>+ Add New</h3>
             <hr style={{width:"100%", marginTop:"15px"}}></hr>
             {mainProps.education.map(school =>
                 <div className="editExpCategory">
