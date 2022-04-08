@@ -127,6 +127,7 @@ h3 {
 
 .previewBodyElement {
   height: auto;
+  margin-top: 10px;
 }
 
 .previewSecondaryBody {
@@ -159,8 +160,9 @@ h3 {
 .jobSubHeader {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 14px;
-  line-height: 1px;
+  margin-bottom: -10px;
 }
 
 .duty {

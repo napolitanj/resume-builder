@@ -52,7 +52,7 @@ class Main extends Component {
         {
           id: Math.floor(Math.random() * 10000)+1,
           employer: "Gas Station",
-          location: "CO",
+          location: "Westminster, CO",
           position: "Attendant - Slinger of Gas",
           start: "Nov 2018",
           end: "April 2021",
@@ -226,6 +226,21 @@ class Main extends Component {
       }
     })
   }
+  editDuty =(e, parent, index) => {
+    const previousEmployment = this.state.employmentInfo
+    const arrayToModify = previousEmployment[parent]
+    const dutyToModify = arrayToModify.duties[index]
+    const getIndex = arrayToModify.duties.indexOf(dutyToModify)
+    arrayToModify.duties[getIndex] = e.target.value
+    previousEmployment[parent].duties[index] = e.target.value
+
+    this.setState({
+      employment: {
+        previousEmployment
+      }
+    })
+
+  }
 
 
 
@@ -274,6 +289,7 @@ class Main extends Component {
               editTopicDescription={this.editTopicDescription}
               editExperience={this.editExperience}
               editEmployment={this.editEmployment}
+              editDuty={this.editDuty}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>

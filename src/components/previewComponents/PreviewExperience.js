@@ -8,7 +8,7 @@ class PreviewExperience extends Component {
       <div>
             <div className="experienceTitle">
                 <h3>{title}</h3>
-                <div style={{overflowWrap:"wrap", textAlign:"right", lineHeight:"auto"}}>
+                <div style={{overflowWrap:"wrap", textAlign:"right"}}>
                   <p>{start} - {end} | {location}</p>
                 </div>
             </div>
