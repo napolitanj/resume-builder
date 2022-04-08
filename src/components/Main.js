@@ -125,6 +125,12 @@ class Main extends Component {
     console.log({firstName})
   }
 
+  editCategory =(e) => {
+    this.setState({
+      activeTab: e
+    })
+  }
+
   //GeneralInfo Editting
   changeGeneral = (e) => {
     const {name,value} = e.target;
@@ -301,11 +307,11 @@ class Main extends Component {
       <div className="mainBody">
         <div>
           <div className="editTabs">
-            <EditTab tabName={"Gen"} />
-            <EditTab tabName={"Exp"} />
-            <EditTab tabName={"Emp"} />
-            <EditTab tabName={"Edu"} />
-            <EditTab tabName={"Skil"} />
+            <EditTab tabName={"Gen"} editCategory={this.editCategory} changeValue={1}/>
+            <EditTab tabName={"Exp"} editCategory={this.editCategory} changeValue={2}/>
+            <EditTab tabName={"Emp"} editCategory={this.editCategory} changeValue={3}/>
+            <EditTab tabName={"Edu"} editCategory={this.editCategory} changeValue={4}/>
+            <EditTab tabName={"Skil"} editCategory={this.editCategory} changeValue={5}/>
           </div>
             <EditMode 
               mainProps={this.state} 
