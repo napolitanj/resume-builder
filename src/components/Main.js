@@ -226,7 +226,7 @@ class Main extends Component {
       }
     })
   }
-  editDuty =(e, parent, index) => {
+  editDuty = (e, parent, index) => {
     const previousEmployment = this.state.employmentInfo
     const arrayToModify = previousEmployment[parent]
     const dutyToModify = arrayToModify.duties[index]
@@ -241,7 +241,18 @@ class Main extends Component {
     })
 
   }
-
+  deleteDuty = (parent,index) => {
+    const previousEmployment = this.state.employmentInfo
+    const textToFilter = previousEmployment[parent].duties[index]
+    const filteredEmployment = previousEmployment[parent].duties.filter(duty => duty !== textToFilter)
+    previousEmployment[parent].duties = filteredEmployment
+    console.log(previousEmployment[parent].duties) 
+    this.setState({
+      employment : {
+        previousEmployment
+      }
+    })
+  }
 
 
   //education Change
@@ -290,6 +301,7 @@ class Main extends Component {
               editExperience={this.editExperience}
               editEmployment={this.editEmployment}
               editDuty={this.editDuty}
+              deleteDuty={this.deleteDuty}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
