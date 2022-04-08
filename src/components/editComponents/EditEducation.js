@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class EditEducation extends Component {
   render() {
-      const {mainProps, editEducation} = this.props
+      const {mainProps, editEducation, deleteEducation} = this.props
     return (
       <div>
         <h2>Education</h2>
@@ -19,6 +19,7 @@ class EditEducation extends Component {
                     <input name="start" maxLength="14" value={school.start} onChange={(e) => editEducation(e, mainProps.education.indexOf(school))}></input>
                     <p>End</p>
                     <input name="end" maxLength="14" value={school.end}  onChange={(e) => editEducation(e, mainProps.education.indexOf(school))}></input>
+                    <button style={{marginTop:"10px"}} onClick={() => deleteEducation(mainProps.education.indexOf(school))}>Delete</button>
                     <hr style={{width:"100%", marginTop:"15px"}}></hr>
                 </div>
             )}
