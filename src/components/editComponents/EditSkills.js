@@ -4,7 +4,7 @@ import { FaTimes} from 'react-icons/fa'
 
 export default class EditSkills extends Component {
   render() {
-      const {mainProps, changeSkill} = this.props
+      const {mainProps, changeSkill, deleteSkill} = this.props
     return (
       <div>
             <h2>Skills</h2>
@@ -17,8 +17,7 @@ export default class EditSkills extends Component {
                     {category.skillList.map(skill =>
                         <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
                             <input value={skill} onChange={(e) => changeSkill(e,mainProps.skills.indexOf(category),category.skillList.indexOf(skill))}></input>
-                            <FaTimes 
-                            style={{color:'gray',cursor:'pointer'}} 
+                            <FaTimes style={{color:'gray',cursor:'pointer'}} onClick={() => deleteSkill(mainProps.skills.indexOf(category),category.skillList.indexOf(skill))} 
                         />
                         </div>
                     )}

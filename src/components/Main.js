@@ -304,9 +304,20 @@ class Main extends Component {
   changeSkill = (e,parent,index) => {
     const previousSkills = this.state.skills
     previousSkills[parent].skillList[index] = e.target.value
-    console.log(e,parent,index)
     this.setState({
       skills: previousSkills
+    })
+  }
+  deleteSkill = (parent,index) => {
+    console.log(parent,index)
+    const previousSkills = this.state.skills
+    const skillToDelete = previousSkills[parent].skillList[index]
+    const filteredSkillList = previousSkills[parent].skillList.filter(duty => duty !== skillToDelete)
+    previousSkills[parent].skillList = filteredSkillList
+    console.log(previousSkills[parent].skillList)
+
+    this.setState({
+      skills : previousSkills
     })
   }
 
@@ -342,6 +353,7 @@ class Main extends Component {
               deleteEducation={this.deleteEducation}
               addNewEducation={this.addNewEducation}
               changeSkill={this.changeSkill}
+              deleteSkill={this.deleteSkill}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
