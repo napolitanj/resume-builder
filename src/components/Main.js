@@ -262,6 +262,15 @@ class Main extends Component {
       }
     })
   }
+  deleteJob = (index) => {
+    const previousEmployment = this.state.employmentInfo
+    previousEmployment.splice(index,1)
+    console.log(previousEmployment)
+    this.setState({
+      employment:
+        previousEmployment
+    })
+  }
 
 
   //education Change
@@ -312,6 +321,7 @@ class Main extends Component {
               editDuty={this.editDuty}
               deleteDuty={this.deleteDuty}
               addNewDuty={this.addNewDuty}
+              deleteJob={this.deleteJob}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
