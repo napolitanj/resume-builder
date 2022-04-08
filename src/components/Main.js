@@ -286,7 +286,6 @@ class Main extends Component {
   deleteEducation = (index) => {
     const previousEducation = this.state.education
     previousEducation.splice(index,1)
-    console.log(previousEducation)
     this.setState({
       education: previousEducation
     })
@@ -321,6 +320,13 @@ class Main extends Component {
   changeTitle = (e, parent) => {
     const previousSkills = this.state.skills
     previousSkills[parent].title = e.target.value
+    this.setState({
+      skills: previousSkills
+    })
+  }
+  deleteSkillCategory = (index) => {
+    const previousSkills = this.state.skills
+    previousSkills.splice(index,1)
     this.setState({
       skills: previousSkills
     })
@@ -360,6 +366,7 @@ class Main extends Component {
               changeSkill={this.changeSkill}
               deleteSkill={this.deleteSkill}
               changeTitle={this.changeTitle}
+              deleteSkillCategory={this.deleteSkillCategory}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>

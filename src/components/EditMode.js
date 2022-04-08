@@ -28,7 +28,8 @@ class EditMode extends Component {
         addNewEducation,
         changeSkill,
         deleteSkill,
-        changeTitle
+        changeTitle,
+        deleteSkillCategory
       } = this.props
 
       if (mainProps.activeTab === 1) {
@@ -88,6 +89,7 @@ class EditMode extends Component {
               changeSkill={changeSkill}
               deleteSkill={deleteSkill}
               changeTitle={changeTitle}
+              deleteSkillCategory={deleteSkillCategory}
               />
             </div>
             )

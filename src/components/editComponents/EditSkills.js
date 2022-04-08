@@ -4,7 +4,7 @@ import { FaTimes} from 'react-icons/fa'
 
 export default class EditSkills extends Component {
   render() {
-      const {mainProps, changeSkill, deleteSkill, changeTitle} = this.props
+      const {mainProps, changeSkill, deleteSkill, changeTitle, deleteSkillCategory} = this.props
     return (
       <div>
             <h2>Skills</h2>
@@ -21,7 +21,7 @@ export default class EditSkills extends Component {
                         />
                         </div>
                     )}
-                    <button style={{marginTop:"8px"}}>Remove</button>
+                    <button style={{marginTop:"8px"}} onClick={() => deleteSkillCategory(mainProps.skills.indexOf(category))}>Remove</button>
                     <hr style={{width:"100%", marginTop:"15px"}}></hr>
                 </div>
             )}
