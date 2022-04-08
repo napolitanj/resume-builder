@@ -25,7 +25,8 @@ class EditMode extends Component {
         deleteJob,
         editEducation,
         deleteEducation,
-        addNewEducation
+        addNewEducation,
+        changeSkill
       } = this.props
 
       if (mainProps.activeTab === 1) {
@@ -82,6 +83,7 @@ class EditMode extends Component {
             <div className="editWindow">
               <EditSkills 
               mainProps={mainProps}
+              changeSkill={changeSkill}
               />
             </div>
             )

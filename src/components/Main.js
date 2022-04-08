@@ -300,16 +300,14 @@ class Main extends Component {
     })
   }
 
-
-  //skills Change
-  changeSkills = (e) => {
-    const {name,value} = e.target;
+  //Skill Editting
+  changeSkill = (e,parent,index) => {
+    const previousSkills = this.state.skills
+    previousSkills[parent].skillList[index] = e.target.value
+    console.log(e,parent,index)
     this.setState({
-      skills: {
-        ...this.state.skills,
-        [name]: value
-      }
-    });
+      skills: previousSkills
+    })
   }
 
 
@@ -343,6 +341,7 @@ class Main extends Component {
               editEducation={this.editEducation}
               deleteEducation={this.deleteEducation}
               addNewEducation={this.addNewEducation}
+              changeSkill={this.changeSkill}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
