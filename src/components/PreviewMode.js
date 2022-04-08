@@ -61,8 +61,7 @@ class PreviewMode extends Component {
                     <div className="skills">
                         {skills.map((skill) => (
                             <Skill 
-                            key={skill.id} 
-                            category={skill.category} 
+                            category={skill.title} 
                             list={skill.skillList} 
                             />
                         ))}

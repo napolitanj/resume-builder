@@ -4,7 +4,7 @@ import { FaTimes} from 'react-icons/fa'
 
 export default class EditSkills extends Component {
   render() {
-      const {mainProps, changeSkill, deleteSkill} = this.props
+      const {mainProps, changeSkill, deleteSkill, changeTitle} = this.props
     return (
       <div>
             <h2>Skills</h2>
@@ -12,7 +12,7 @@ export default class EditSkills extends Component {
             {mainProps.skills.map(category => 
                 <div className="editExpCategory">
                     <h3>Category title</h3>
-                    <input value={category.title}></input>
+                    <input value={category.title} onChange={(e) => changeTitle(e,mainProps.skills.indexOf(category))}></input>
                     <h3>Skill list</h3>
                     {category.skillList.map(skill =>
                         <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
