@@ -3,6 +3,8 @@ import EditGeneral from './editComponents/EditGeneral'
 import EditExperience from './editComponents/EditExperience'
 import EditEmployment from './editComponents/EditEmployment'
 import EditEducation from './editComponents/EditEducation'
+import EditSkills from './editComponents/EditSkills'
+
 
 class EditMode extends Component {
     render() {
@@ -74,7 +76,16 @@ class EditMode extends Component {
             addNewEducation={addNewEducation}
             />
           </div>
-      )}
+        )
+      } else if (mainProps.activeTab === 5) {
+          return (
+            <div className="editWindow">
+              <EditSkills 
+              mainProps={mainProps}
+              />
+            </div>
+            )
+          }
     }
 }
 

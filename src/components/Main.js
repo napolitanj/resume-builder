@@ -10,7 +10,7 @@ class Main extends Component {
       //editMode false is preview mode, editMode true is editMode
       editMode: false,
       addWebsite:false,
-      activeTab:4,
+      activeTab:5,
       generalInfo: {
         firstName: 'Joe',
         lastName: 'Dirt',
@@ -101,15 +101,15 @@ class Main extends Component {
       ],
       skills: [
         {
-          category: "Languages",
+          title: "Languages",
           skillList: ["Javascript ES6", "HTML", "CSS"]
         },
         {
-          category: "Tools",
+          title: "Tools",
           skillList: ["Javascript ES6", "HTML", "CSS","Javascript ES6", "HTML", "CSS","Javascript ES6", "HTML", "CSS"]
         },
         {
-          category: "More Tools",
+          title: "More Tools",
           skillList: ["Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github","Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github"]
         },  
       ]
