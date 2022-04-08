@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class EditEducation extends Component {
   render() {
-      const {mainProps} = this.props
+      const {mainProps, editEducation} = this.props
     return (
       <div>
         <h2>Education</h2>
@@ -10,15 +10,15 @@ class EditEducation extends Component {
             {mainProps.education.map(school =>
                 <div className="editExpCategory">
                     <p>Degree/Certification</p>
-                    <input maxLength="60" value={school.degree}></input>
+                    <input name="degree" maxLength="35" value={school.degree} onChange={(e) => editEducation(e, mainProps.education.indexOf(school))}></input>
                     <p>School Name</p>
-                    <input maxLength="60" value={school.school}></input>
+                    <input name="school" maxLength="45" value={school.school} onChange={(e) => editEducation(e, mainProps.education.indexOf(school))}></input>
                     <p>School Location</p>
-                    <input maxLength="60" value={school.location}></input>
+                    <input name="location" maxLength="21" value={school.location} onChange={(e) => editEducation(e, mainProps.education.indexOf(school))}></input>
                     <p>Start</p>
-                    <input maxLength="60" value={school.start}></input>
+                    <input name="start" maxLength="14" value={school.start} onChange={(e) => editEducation(e, mainProps.education.indexOf(school))}></input>
                     <p>End</p>
-                    <input maxLength="60" value={school.end}></input>
+                    <input name="end" maxLength="14" value={school.end}  onChange={(e) => editEducation(e, mainProps.education.indexOf(school))}></input>
                     <hr style={{width:"100%", marginTop:"15px"}}></hr>
                 </div>
             )}

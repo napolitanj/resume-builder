@@ -10,7 +10,7 @@ class Main extends Component {
       //editMode false is preview mode, editMode true is editMode
       editMode: false,
       addWebsite:false,
-      activeTab:3,
+      activeTab:4,
       generalInfo: {
         firstName: 'Joe',
         lastName: 'Dirt',
@@ -83,7 +83,6 @@ class Main extends Component {
           location: "Remote",
           start: "Sept 2021",
           end: "Ongoing",
-          id: Math.floor(Math.random() * 10000)+1
         },
         {
           degree: "B.S. Group Social Studies",
@@ -91,7 +90,6 @@ class Main extends Component {
           location: "East Lansing, MI",
           start: "Sept 2021",
           end: "Ongoing",
-          id: Math.floor(Math.random() * 10000)+1
         },
         {
           degree: "Leadership School",
@@ -99,7 +97,6 @@ class Main extends Component {
           location: "Lander, WY",
           start: "Sept 2021",
           end: "Ongoing",
-          id: Math.floor(Math.random() * 10000)+1
         },
       ],
       skills: [
@@ -119,12 +116,7 @@ class Main extends Component {
     }
   }
 
-  //Delete later
-  logFields = () => {
-    const {firstName} = this.state.generalInfo;
-    console.log({firstName})
-  }
-
+  //Toggle category in edit window
   editCategory =(e) => {
     this.setState({
       activeTab: e
@@ -278,17 +270,23 @@ class Main extends Component {
     })
   }
 
+  //Education Editting
+  editEducation = (e, index) => {
+    const previousEducation = this.state.education
+    console.log(previousEducation)
+    const schoolToEdit = previousEducation[index]
+    schoolToEdit[e.target.name] = e.target.value
+    previousEducation[index] = schoolToEdit
 
-  //education Change
-  changeEducation = (e) => {
-    const {name,value} = e.target;
+    console.log(previousEducation)
     this.setState({
-      education: {
-        ...this.state.education,
-        [name]: value
-      }
-    });
+      education: 
+        previousEducation
+    })
   }
+
+
+
   //skills Change
   changeSkills = (e) => {
     const {name,value} = e.target;
@@ -328,6 +326,7 @@ class Main extends Component {
               deleteDuty={this.deleteDuty}
               addNewDuty={this.addNewDuty}
               deleteJob={this.deleteJob}
+              editEducation={this.editEducation}
             /> 
         </div>
         <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
