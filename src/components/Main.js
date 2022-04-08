@@ -10,7 +10,7 @@ class Main extends Component {
       //editMode false is preview mode, editMode true is editMode
       editMode: false,
       addWebsite:false,
-      activeTab:5,
+      activeTab:1,
       generalInfo: {
         firstName: 'Joe',
         lastName: 'Dirt',
@@ -19,10 +19,7 @@ class Main extends Component {
         phone: '235-646-2423',
         email: 'joedirt@gmail.com',
         websites: [
-          {
-            id:1,
-            text: "www.joedirt.com"
-          }
+          "www.joedirt.com"
         ]
       },
       experience: {

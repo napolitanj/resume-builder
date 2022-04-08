@@ -22,12 +22,15 @@ class EditGeneral extends Component {
             <input name="email" value={general.email} onChange={(e) => changeGeneral(e)}></input>
             <hr></hr>
             <p style={{fontWeight:"700"}}>Web pages</p>
-            {general.websites.map(site => <p>{site.text} 
-              <FaTimes 
-              style={{color:'gray',cursor:'pointer'}} 
-              onClick={() => deleteWebsite(site.id)}
-              />
-            </p>)}
+            {general.websites.map(site => 
+              <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+                <p>{site}</p> 
+                <FaTimes 
+                style={{color:'gray',cursor:'pointer'}} 
+                onClick={() => deleteWebsite(site.id)}
+                />
+              </div>
+            )}
             <hr></hr>
             <div style={{marginTop:"20px"}}>
               <button onClick={() => setAddWeb()}>Add a website</button>
