@@ -3,7 +3,7 @@ import { FaTimes} from 'react-icons/fa'
 
 class EditExperience extends Component {
   render() {
-      const {experienceProps, editExperience, editTopicTitle, editTopicDescription} = this.props;
+      const {experienceProps, editExperience, editTopicTitle, editTopicDescription, removeExpCategory} = this.props;
     return (
       <div>
           <h2>Experience</h2>
@@ -22,7 +22,7 @@ class EditExperience extends Component {
                     <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}> 
                         <input type="text" maxLength="40" defaultValue={topic.title} style={{width:"50%"}} onChange={(e) => editTopicTitle(e,topic.id)}></input>
                         <FaTimes 
-                            style={{color:'gray',cursor:'pointer'}} 
+                            style={{color:'gray',cursor:'pointer'}} onClick={() => removeExpCategory(experienceProps.topics.indexOf(topic))} 
                         />
                     </div>
                     <textarea type="text" maxLength="170" className="expInput" defaultValue={topic.description} onChange={(e) => editTopicDescription(e,topic.id)}></textarea>

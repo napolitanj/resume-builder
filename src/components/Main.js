@@ -162,6 +162,16 @@ class Main extends Component {
       }
     });
   }
+  removeExpCategory = (index) => {
+    const previousTopics = this.state.experience.topics
+    previousTopics.splice(index, 1)
+    console.log(previousTopics)
+    this.setState({
+      experience: {
+        topics: previousTopics
+      }
+    })
+  }
   editTopicTitle = (e, id) => {
     const allPreviousTopics = [...this.state.experience.topics]
     const getArray = allPreviousTopics.filter(topic => {
@@ -352,6 +362,7 @@ class Main extends Component {
               editTopicTitle={this.editTopicTitle}
               editTopicDescription={this.editTopicDescription}
               editExperience={this.editExperience}
+              removeExpCategory={this.removeExpCategory}
               editEmployment={this.editEmployment}
               editDuty={this.editDuty}
               deleteDuty={this.deleteDuty}
