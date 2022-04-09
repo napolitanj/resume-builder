@@ -17,9 +17,10 @@ class Main extends Component {
         title: "Front End Developer and lead Engineer",
         city: 'Mooselookmeguntic, AZ',
         phone: '235-646-2423',
-        email: 'joedirt@gmail.com',
+        email: 'bartholwmewdsadsadirt@gmail.com',
         websites: [
-          "www.joedirt.com"
+          "www.joedirt.com",
+          "www.myportfolio.com/joedirt"
         ]
       },
       experience: {
@@ -50,7 +51,7 @@ class Main extends Component {
           id: Math.floor(Math.random() * 10000)+1,
           employer: "Gas Station",
           location: "Westminster, CO",
-          position: "Attendant - Slinger of Gas",
+          position: "Gas Station Attendant and Server",
           start: "Nov 2018",
           end: "April 2021",
           duties: [
@@ -61,7 +62,7 @@ class Main extends Component {
         },
         {
           id: Math.floor(Math.random() * 10000)+1,
-          employer: "Shoe-topia",
+          employer: "Engineering Firm",
           location: "Santa Fe, NM",
           position: "Salesman",
           start: "Nov 2015",

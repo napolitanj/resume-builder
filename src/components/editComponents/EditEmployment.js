@@ -21,7 +21,7 @@ class EditEmployment extends Component {
                     <p>End (month and year)</p>
                     <input maxLength="14" value={job.end} onChange={(e) => editEmployment(e,job.id, 'end')}></input>
                     <div style={{display:"flex", alignItems:"center", gap:"5px"}}>
-                        <p >Duties</p>
+                        <p>Duties</p>
                         <p style={{color:'gray',cursor:'pointer'}} onClick={() => addNewDuty(mainProps.employmentInfo.indexOf(job))}>+ Add New</p>
                     </div>
                     {job.duties.map(duty =>
