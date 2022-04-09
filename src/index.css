@@ -6,7 +6,7 @@ body {
 }
 
 p {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 h3 {
@@ -54,7 +54,7 @@ h3 {
   flex-direction: column;
   background-color: white;
   padding: 40px;
-  padding-top: 30px;
+  padding-top: 15px;
   width: 680px;
   height: 880px;
   box-shadow: 5px 5px;
@@ -62,6 +62,7 @@ h3 {
 
 .previewHeader {
   height: auto;
+  margin-bottom: -10px;
 }
 
 .previewBody {
@@ -89,7 +90,7 @@ h3 {
 }
 
 .secondaryGeneralInfo {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   overflow-wrap: break-word;
 }
 
@@ -151,15 +152,18 @@ h3 {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+  margin-bottom: -12px;
 }
 
 .experienceSubTitle {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1px;
+  margin-bottom: -3px;
 }
 
 .experienceTopic {
   font-size: 12px;
+  margin-bottom: 20px;
 }
 
 .jobSubHeader {
@@ -168,12 +172,13 @@ h3 {
   align-items: center;
   font-size: 14px;
   margin-bottom: -10px;
+  margin-top: -10px;
   gap: 10px;
 }
 
 .duty {
-  font-size: 12px;
-  margin-left: 12px;
+  font-size: 13px;
+  margin-left: 16px;
 }
 
 .educationSubText {
@@ -181,7 +186,7 @@ h3 {
   justify-content: space-between;
   font-size: 12px;
   gap: 10px;
-  margin-top: -10px;
+  margin-top: -25px;
   margin-bottom: -10px;
 }
 

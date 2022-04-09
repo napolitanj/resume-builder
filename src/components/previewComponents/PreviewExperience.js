@@ -5,11 +5,11 @@ class PreviewExperience extends Component {
   render() {
       const {title, location, start, end, topics} = this.props
     return (
-      <div>
+      <div style={{marginBottom:"-10px"}}>
             <div className="experienceTitle">
-                <h3>{title}</h3>
+                <h3 >{title}</h3>
                 <div style={{overflowWrap:"wrap", textAlign:"right"}}>
-                  <p>{start} - {end} | {location}</p>
+                  <p style={{color:"#73808D"}}>{start} - {end} | {location}</p>
                 </div>
             </div>
             <div>

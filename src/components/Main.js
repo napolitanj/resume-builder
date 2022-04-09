@@ -12,19 +12,19 @@ class Main extends Component {
       addWebsite:false,
       activeTab:1,
       generalInfo: {
-        firstName: 'Bartholwmew',
-        lastName: 'Dirtyslinger',
-        title: "Front End Developer and lead Engineer",
-        city: 'Mooselookmeguntic, AZ',
-        phone: '235-646-2423',
-        email: 'bartholwmewdsadsadirt@gmail.com',
+        firstName: 'Jon',
+        lastName: 'Doe',
+        title: "Front End Developer and Lead Engineer",
+        city: 'New York, NY',
+        phone: '235-646-2473',
+        email: 'johndoe@gmail.com',
         websites: [
-          "www.joedirt.com",
-          "www.myportfolio.com/joedirt"
+          "www.johndoe.com",
+          "github.com/joedirt"
         ]
       },
       experience: {
-        title: "The Odin Project",
+        title: "App I Created",
         location: "Remote",
         start: "Sept 2021",
         end: "Present",
@@ -49,9 +49,9 @@ class Main extends Component {
       employmentInfo:[
         {
           id: Math.floor(Math.random() * 10000)+1,
-          employer: "Gas Station",
-          location: "Westminster, CO",
-          position: "Gas Station Attendant and Server",
+          employer: "Business Name",
+          location: "Denver, CO",
+          position: "My Position at This Company",
           start: "Nov 2018",
           end: "April 2021",
           duties: [
@@ -62,9 +62,9 @@ class Main extends Component {
         },
         {
           id: Math.floor(Math.random() * 10000)+1,
-          employer: "Engineering Firm",
+          employer: "Another Place I Worked",
           location: "Santa Fe, NM",
-          position: "Salesman",
+          position: "The Job I Worked There",
           start: "Nov 2015",
           end: "April 2020",
           duties: [
@@ -76,8 +76,8 @@ class Main extends Component {
       ],
       education: [
         {
-          degree: "Full Stack Web Development",
-          school: "The Odin Project",
+          degree: "The Degree or Certification I Earned",
+          school: "The School I Studied At",
           location: "Remote",
           start: "Sept 2021",
           end: "Ongoing",
@@ -104,11 +104,11 @@ class Main extends Component {
         },
         {
           title: "Tools",
-          skillList: ["Javascript ES6", "HTML", "CSS","Javascript ES6", "HTML", "CSS","Javascript ES6", "HTML", "CSS"]
+          skillList: ["Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github","Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github"]
         },
         {
-          title: "More Tools",
-          skillList: ["Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github","Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github"]
+          title: "Other Relevant Skills for This Job",
+          skillList: ["Leadership","Conflict Resolution","Problem Solving","Risk Management"]
         },  
       ]
     }

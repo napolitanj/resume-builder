@@ -8,7 +8,7 @@ class PreviewEducation extends Component {
             <h3>{degree}</h3>
             <div className="educationSubText">
                 <p>{school}</p>
-                <p>{start} - {end} | {location}</p>
+                <p style={{color:"#73808D"}}>{start} - {end} | {location}</p>
             </div>
       </div>
     )
