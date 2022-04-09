@@ -19,6 +19,7 @@ class EditMode extends Component {
         editTopicDescription,
         editExperience,
         removeExpCategory,
+        addExpCategory,
         editEmployment,
         editDuty,
         deleteDuty,
@@ -56,6 +57,7 @@ class EditMode extends Component {
             editTopicDescription={editTopicDescription}
             editExperience={editExperience}
             removeExpCategory={removeExpCategory}
+            addExpCategory={addExpCategory}
             />
           </div>
         )

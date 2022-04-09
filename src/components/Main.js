@@ -165,10 +165,17 @@ class Main extends Component {
   removeExpCategory = (index) => {
     const previousTopics = this.state.experience.topics
     previousTopics.splice(index, 1)
-    console.log(previousTopics)
     this.setState({
       experience: {
         topics: previousTopics
+      }
+    })
+  }
+  addExpCategory = () => {
+    this.setState({
+      experience: {
+        ...this.state.experience,
+        topics: [...this.state.experience.topics, {}]
       }
     })
   }
@@ -363,6 +370,7 @@ class Main extends Component {
               editTopicDescription={this.editTopicDescription}
               editExperience={this.editExperience}
               removeExpCategory={this.removeExpCategory}
+              addExpCategory={this.addExpCategory}
               editEmployment={this.editEmployment}
               editDuty={this.editDuty}
               deleteDuty={this.deleteDuty}
