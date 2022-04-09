@@ -9,13 +9,13 @@ class EditGeneral extends Component {
       <div>
           <h2>General Info</h2>
             <p>First Name</p>
-            <input name="firstName" value={general.firstName} onChange={(e) => changeGeneral(e)}></input>
+            <input name="firstName" maxLength="12" value={general.firstName} onChange={(e) => changeGeneral(e)}></input>
             <p>Last Name</p>
-            <input name="lastName" value={general.lastName} onChange={(e) => changeGeneral(e)}></input>
+            <input name="lastName" maxLength="19" value={general.lastName} onChange={(e) => changeGeneral(e)}></input>
             <p>Title</p>
-            <input name="title" value={general.title} onChange={(e) => changeGeneral(e)}></input>
+            <input name="title" maxLength="40" value={general.title} onChange={(e) => changeGeneral(e)}></input>
             <p>City</p>
-            <input name="city" value={general.city} onChange={(e) => changeGeneral(e)}></input>
+            <input name="city" maxLength="19" value={general.city} onChange={(e) => changeGeneral(e)}></input>
             <p>Phone</p>
             <input name="phone" value={general.phone} onChange={(e) => changeGeneral(e)}></input>
             <p>Email</p>

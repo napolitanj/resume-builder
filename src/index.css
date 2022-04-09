@@ -55,8 +55,8 @@ h3 {
   background-color: white;
   padding: 48px;
   padding-top: 38px;
-  width: 60%;
-  height: auto;
+  width: 680px;
+  height: 880px;
   box-shadow: 5px 5px;
 }
 
@@ -110,12 +110,12 @@ h3 {
 
 .previewHeader {
   height: auto;
-  line-height: 8px;
 }
 
 .previewBody {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .previewMainBody {
@@ -163,6 +163,7 @@ h3 {
   align-items: center;
   font-size: 14px;
   margin-bottom: -10px;
+  gap: 10px;
 }
 
 .duty {
@@ -174,7 +175,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  line-height: 0px;
+  gap: 10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .editExpCategory {

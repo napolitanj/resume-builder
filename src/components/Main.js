@@ -12,10 +12,10 @@ class Main extends Component {
       addWebsite:false,
       activeTab:1,
       generalInfo: {
-        firstName: 'Joe',
-        lastName: 'Dirt',
-        title: "Front End Developer",
-        city: 'Tuscon, AZ',
+        firstName: 'Bartholwmew',
+        lastName: 'Dirtyslinger',
+        title: "Front End Developer and lead Engineer",
+        city: 'Mooselookmeguntic, AZ',
         phone: '235-646-2423',
         email: 'joedirt@gmail.com',
         websites: [
@@ -357,7 +357,7 @@ class Main extends Component {
             <EditTab tabName={"Exp"} editCategory={this.editCategory} changeValue={2}/>
             <EditTab tabName={"Emp"} editCategory={this.editCategory} changeValue={3}/>
             <EditTab tabName={"Edu"} editCategory={this.editCategory} changeValue={4}/>
-            <EditTab tabName={"Skil"} editCategory={this.editCategory} changeValue={5}/>
+            <EditTab tabName={"Skill"} editCategory={this.editCategory} changeValue={5}/>
           </div>
             <EditMode 
               mainProps={this.state} 
