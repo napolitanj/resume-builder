@@ -4,10 +4,12 @@ import { FaTimes} from 'react-icons/fa'
 
 export default class EditSkills extends Component {
   render() {
-      const {mainProps, changeSkill, deleteSkill, changeTitle, deleteSkillCategory} = this.props
+      const {mainProps, changeSkill, deleteSkill, changeTitle, addSkill, deleteSkillCategory} = this.props
     return (
       <div>
             <h2>Skills</h2>
+            <h3 style={{cursor:"pointer"}} onClick={() => addSkill()}>+ Add New</h3>
+
             <hr style={{width:"100%", marginTop:"15px"}}></hr>
             {mainProps.skills.map(category => 
                 <div className="editExpCategory">

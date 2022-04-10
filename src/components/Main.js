@@ -362,6 +362,17 @@ class Main extends Component {
       skills: previousSkills
     })
   }
+  addSkill = () => {
+    const previousSkills = this.state.skills
+    const newObject = {
+      title: "",
+      skillList: ["", "", ""]
+    }
+    previousSkills.push(newObject)
+    this.setState({
+      skills: previousSkills
+    })
+  }
 
   render() {
     const elementss = document.getElementById("")
@@ -398,12 +409,12 @@ class Main extends Component {
               addNewEducation={this.addNewEducation}
               changeSkill={this.changeSkill}
               deleteSkill={this.deleteSkill}
+              addSkill={this.addSkill}
               changeTitle={this.changeTitle}
               deleteSkillCategory={this.deleteSkillCategory}
             /> 
         </div>
         <div >
-          <button onClick={() => console.log(elementss)}>Print</button>
           <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
         </div>
       </div>

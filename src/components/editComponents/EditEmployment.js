@@ -8,7 +8,7 @@ class EditEmployment extends Component {
       return (
         <div>
             <h2>Employment</h2>
-            <h3 style={{cursor:"pointer"}} onClick={() => addNewEmployment(template)}>+ Add New</h3>
+            <h3 style={{cursor:"pointer"}} onClick={() => addNewEmployment()}>+ Add New</h3>
             <hr style={{width:"100%", marginTop:"15px"}}></hr>
             {mainProps.employmentInfo.map(job =>
                 <div key={job}className="editExpCategory">
