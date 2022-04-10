@@ -362,7 +362,7 @@ class Main extends Component {
       skills: previousSkills
     })
   }
-  addSkill = () => {
+  addSkillCategory = () => {
     const previousSkills = this.state.skills
     const newObject = {
       title: "",
@@ -373,9 +373,18 @@ class Main extends Component {
       skills: previousSkills
     })
   }
+  addSkill = (e) => {
+    const previousSkills = this.state.skills
+    const categoryToEdit = previousSkills[e]
+    categoryToEdit.skillList.push('')
+    previousSkills[e] = categoryToEdit
+    this.setState({
+      skills: previousSkills
+    })
+  }
+
 
   render() {
-    const elementss = document.getElementById("")
     return (
       <div className="mainBody">
         <div>
@@ -410,6 +419,7 @@ class Main extends Component {
               changeSkill={this.changeSkill}
               deleteSkill={this.deleteSkill}
               addSkill={this.addSkill}
+              addSkillCategory={this.addSkillCategory}
               changeTitle={this.changeTitle}
               deleteSkillCategory={this.deleteSkillCategory}
             /> 

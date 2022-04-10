@@ -32,6 +32,7 @@ class EditMode extends Component {
         changeSkill,
         deleteSkill,
         addSkill,
+        addSkillCategory,
         changeTitle,
         deleteSkillCategory
       } = this.props
@@ -96,6 +97,7 @@ class EditMode extends Component {
               changeSkill={changeSkill}
               deleteSkill={deleteSkill}
               addSkill={addSkill}
+              addSkillCategory={this.addSkillCategory}
               changeTitle={changeTitle}
               deleteSkillCategory={deleteSkillCategory}
               />
