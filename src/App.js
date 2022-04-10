@@ -7,8 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="header">
-          <h1>Get a job.</h1>
-          <h3>A CV-Application</h3>
+          <h1>Resume Builder</h1>
         </header>
         <Main/>
         <footer className="footer">

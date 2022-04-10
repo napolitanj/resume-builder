@@ -48,11 +48,11 @@ class PreviewMode extends Component {
                 </div>
                 <div className="previewSecondaryBody">
                     <div className="secondaryGeneralInfo">
-                        <p style={{marginBottom:"-6px"}}>{generalInfo.email}</p>
-                        <p style={{marginBottom:"-6px"}}>{generalInfo.phone}</p>
+                        <p style={{marginBottom:"-8px"}}>{generalInfo.email}</p>
+                        <p style={{marginBottom:"-8px"}}>{generalInfo.phone}</p>
                         <p style={{marginBottom:"-6px"}}>{generalInfo.city}</p>
                         <div style={{marginTop:"22px"}}>
-                            <p style={{fontWeight:700, fontSize:"14px", marginBottom:"-10px"}}>Web</p>
+                            <p style={{fontWeight:700, fontSize:"15px", marginBottom:"-10px"}}>Web</p>
                             {generalInfo.websites.map((site) => (
                                 <p style={{marginBottom:"-10px"}}>{site}</p>
                             ))}

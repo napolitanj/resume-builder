@@ -14,7 +14,7 @@ class Main extends Component {
       generalInfo: {
         firstName: 'Jon',
         lastName: 'Doe',
-        title: "Front End Developer and Lead Engineer",
+        title: "My Professional Title",
         city: 'New York, NY',
         phone: '235-646-2473',
         email: 'johndoe@gmail.com',
@@ -62,15 +62,15 @@ class Main extends Component {
         },
         {
           id: Math.floor(Math.random() * 10000)+1,
-          employer: "Another Place I Worked",
-          location: "Santa Fe, NM",
-          position: "The Job I Worked There",
-          start: "Nov 2015",
-          end: "April 2020",
+          employer: "Workplace Name",
+          location: "Workplace Location",
+          position: "Position",
+          start: "Start Date",
+          end: "End Date",
           duties: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "Integer in aliquet metus, non fermentum arcu.",
-            "Integer in aliquet metus, non fermentum arcu. Integer tempus nibh eu urna tincidunt lacinia."
+            "Responsibilities...",
+            "Responsibilities...",
+            "Responsibilities..."
           ],
         },
       ],
@@ -283,6 +283,22 @@ class Main extends Component {
         previousEmployment
     })
   }
+  addNewEmployment = () => {
+    const previousEmployment = this.state.employmentInfo
+    const newObject = {
+      id: Math.floor(Math.random() * 10000)+1,
+      position: '',
+      employer: '',
+      location: '',
+      start:'',
+      end:'',
+      duties: ["",""]
+    }
+    previousEmployment.push(newObject)
+    this.setState({
+      emplyoment: previousEmployment
+    })
+  }
 
   //Education Editting
   editEducation = (e, index) => {
@@ -347,18 +363,17 @@ class Main extends Component {
     })
   }
 
-
-
   render() {
+    const elementss = document.getElementById("")
     return (
       <div className="mainBody">
         <div>
           <div className="editTabs">
-            <EditTab tabName={"Gen"} editCategory={this.editCategory} changeValue={1}/>
-            <EditTab tabName={"Exp"} editCategory={this.editCategory} changeValue={2}/>
-            <EditTab tabName={"Emp"} editCategory={this.editCategory} changeValue={3}/>
-            <EditTab tabName={"Edu"} editCategory={this.editCategory} changeValue={4}/>
-            <EditTab tabName={"Skill"} editCategory={this.editCategory} changeValue={5}/>
+            <EditTab tabName={"General"} editCategory={this.editCategory} changeValue={1}/>
+            <EditTab tabName={"Experience"} editCategory={this.editCategory} changeValue={2}/>
+            <EditTab tabName={"Employment"} editCategory={this.editCategory} changeValue={3}/>
+            <EditTab tabName={"Education"} editCategory={this.editCategory} changeValue={4}/>
+            <EditTab tabName={"Skills"} editCategory={this.editCategory} changeValue={5}/>
           </div>
             <EditMode 
               mainProps={this.state} 
@@ -377,6 +392,7 @@ class Main extends Component {
               deleteDuty={this.deleteDuty}
               addNewDuty={this.addNewDuty}
               deleteJob={this.deleteJob}
+              addNewEmployment={this.addNewEmployment}
               editEducation={this.editEducation}
               deleteEducation={this.deleteEducation}
               addNewEducation={this.addNewEducation}
@@ -386,7 +402,10 @@ class Main extends Component {
               deleteSkillCategory={this.deleteSkillCategory}
             /> 
         </div>
-        <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
+        <div >
+          <button onClick={() => console.log(elementss)}>Print</button>
+          <PreviewMode generalInfo={this.state.generalInfo} experience={this.state.experience} employmentInfo={this.state.employmentInfo} education={this.state.education} skills={this.state.skills}/>
+        </div>
       </div>
     )
   }

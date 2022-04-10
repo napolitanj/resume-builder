@@ -9,7 +9,7 @@ class Skill extends Component {
       }
     return (
       <div>
-          <p style={{fontWeight:700, fontSize:"14px", marginBottom:"-10px"}}>{category}</p>
+          <p style={{fontWeight:700, fontSize:"15px", marginBottom:"-10px"}}>{category}</p>
           <p>{createList()}</p>
       </div>
     )

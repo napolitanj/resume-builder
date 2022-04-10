@@ -25,6 +25,7 @@ class EditMode extends Component {
         deleteDuty,
         addNewDuty,
         deleteJob,
+        addNewEmployment,
         editEducation,
         deleteEducation,
         addNewEducation,
@@ -71,6 +72,7 @@ class EditMode extends Component {
             deleteDuty={deleteDuty}
             addNewDuty={addNewDuty}
             deleteJob={deleteJob}
+            addNewEmployment={addNewEmployment}
             />
           </div>
         )

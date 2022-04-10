@@ -3,10 +3,12 @@ import { FaTimes} from 'react-icons/fa'
 
 class EditEmployment extends Component {
     render() {
-        const {mainProps, editEmployment, editDuty, deleteDuty, addNewDuty, deleteJob} = this.props;
+        const {mainProps, addNewEmployment, editEmployment, editDuty, deleteDuty, addNewDuty, deleteJob} = this.props;
+        const template = mainProps.employmentInfo[1]
       return (
         <div>
             <h2>Employment</h2>
+            <h3 style={{cursor:"pointer"}} onClick={() => addNewEmployment(template)}>+ Add New</h3>
             <hr style={{width:"100%", marginTop:"15px"}}></hr>
             {mainProps.employmentInfo.map(job =>
                 <div key={job}className="editExpCategory">
