@@ -27,7 +27,7 @@ class EditGeneral extends Component {
                 <p>{site}</p> 
                 <FaTimes 
                 style={{color:'gray',cursor:'pointer'}} 
-                onClick={() => deleteWebsite(site.id)}
+                onClick={() => deleteWebsite(site)}
                 />
               </div>
             )}

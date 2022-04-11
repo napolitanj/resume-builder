@@ -145,11 +145,11 @@ class Main extends Component {
       }
     }))
   }
-  deleteWebsite = (id) => {
+  deleteWebsite = (site) => {
     this.setState(prevState => ({
       generalInfo: {
         ...prevState.generalInfo,
-        websites: [...prevState.generalInfo.websites.filter((website) => website.id !== id)]
+        websites: [...prevState.generalInfo.websites.filter((website) => website !== site)]
       }
     }))
   }
