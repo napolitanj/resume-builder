@@ -67,6 +67,7 @@ textArea {
   flex-direction: column;
   background-color: white;
   padding: 40px;
+  padding-right: 30px;
   padding-top: 15px;
   width: 680px;
   height: auto;
@@ -97,7 +98,7 @@ textArea {
 }
 
 .previewSecondaryBody {
-  width: 25%;
+  width: 26%;
   height: auto;
   color: black;
 }

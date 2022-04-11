@@ -17,9 +17,9 @@ class EditGeneral extends Component {
             <p>City</p>
             <input name="city" maxLength="19" value={general.city} onChange={(e) => changeGeneral(e)}></input>
             <p>Phone</p>
-            <input name="phone" value={general.phone} onChange={(e) => changeGeneral(e)}></input>
+            <input name="phone" maxLength="14" value={general.phone}  onChange={(e) => changeGeneral(e)}></input>
             <p>Email</p>
-            <input name="email" value={general.email} onChange={(e) => changeGeneral(e)}></input>
+            <input name="email" maxLength="25" value={general.email} onChange={(e) => changeGeneral(e)}></input>
             <hr></hr>
             <p style={{fontWeight:"700"}}>Web pages</p>
             {general.websites.map(site => 
