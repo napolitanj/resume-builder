@@ -58,7 +58,7 @@ class PreviewMode extends Component {
                             ))}
                         </div>
                     </div>
-                    <div className="skills">
+                    <div className="skills" style={{marginTop:"-30px"}}>
                         {skills.map((skill) => (
                             <Skill 
                             category={skill.title} 

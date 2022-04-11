@@ -69,7 +69,7 @@ textArea {
   padding: 40px;
   padding-top: 30px;
   width: 680px;
-  height: 880px;
+  height: auto;
   box-shadow: 5px 5px;
 }
 
@@ -96,8 +96,8 @@ textArea {
 }
 
 .previewSecondaryBody {
-  width: 22%;
-  height: 684px;
+  width: 25%;
+  height: auto;
   color: #73808d;
 }
 
@@ -158,7 +158,7 @@ textArea {
 
 .categoryHeader {
   font-size: 12px;
-  line-height: 1px;
+  line-height: 1.5px;
 }
 
 .experienceTitle {
@@ -214,4 +214,48 @@ textArea {
   resize: vertical;
   overflow: hidden;
   min-height: 40px;
+}
+
+/**************** PRINT ******************/
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    visibility: hidden;
+  }
+
+  hr {
+    border: 0;
+    clear: both;
+    display: block;
+    height: 1px;
+    background-color: black;
+    max-width: 100%;
+  }
+
+  .previewWindow {
+    margin: 10mm;
+    margin-left: 20mm;
+    box-shadow: 0px 0px;
+    padding: 0px;
+    padding-top: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .previewWindow,
+  .previewHeader,
+  .previewBody,
+  .previewMainBody,
+  .previewBodyElement,
+  .previewSecondaryBody {
+    visibility: visible;
+  }
+
+  .previewBody {
+    margin-bottom: 0px;
+  }
 }
