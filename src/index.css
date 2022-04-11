@@ -75,6 +75,7 @@ textArea {
 
 .previewHeader {
   height: auto;
+  margin-bottom: -5px;
 }
 
 .previewBody {
@@ -98,7 +99,7 @@ textArea {
 .previewSecondaryBody {
   width: 25%;
   height: auto;
-  color: #73808d;
+  color: black;
 }
 
 .secondaryGeneralInfo {

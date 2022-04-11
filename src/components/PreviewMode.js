@@ -4,6 +4,7 @@ import PreviewExperience from './previewComponents/PreviewExperience'
 import PreviewEmployment from './previewComponents/PreviewEmployment'
 import PreviewEducation from './previewComponents/PreviewEducation'
 import Skill from './previewComponents/Skill'
+import {FaEnvelope, FaPhone, FaMapMarker} from 'react-icons/fa'
 
 
 class PreviewMode extends Component {
@@ -48,9 +49,9 @@ class PreviewMode extends Component {
                 </div>
                 <div className="previewSecondaryBody">
                     <div className="secondaryGeneralInfo">
-                        <p style={{marginBottom:"-8px"}}>{generalInfo.email}</p>
-                        <p style={{marginBottom:"-8px"}}>{generalInfo.phone}</p>
-                        <p style={{marginBottom:"-6px"}}>{generalInfo.city}</p>
+                        <p style={{marginBottom:"-8px"}} ><FaEnvelope /> {generalInfo.email}</p>
+                        <p style={{marginBottom:"-8px"}}><FaPhone /> {generalInfo.phone}</p>
+                        <p style={{marginBottom:"-6px"}}><FaMapMarker /> {generalInfo.city}</p>
                         <div style={{marginTop:"22px"}}>
                             <p style={{fontWeight:700, fontSize:"15px", marginBottom:"-10px"}}>Web</p>
                             {generalInfo.websites.map((site) => (

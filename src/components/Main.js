@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PreviewMode from './PreviewMode'
 import EditMode from './EditMode'
 import EditTab from './editComponents/EditTab'
-import jsPDF from 'jspdf'
 
 class Main extends Component {
   constructor(props) {
@@ -21,7 +20,7 @@ class Main extends Component {
         email: 'johndoe@gmail.com',
         websites: [
           "www.johndoe.com",
-          "github.com/joedirt"
+          "github.com/johndoe"
         ]
       },
       experience: {
@@ -278,7 +277,6 @@ class Main extends Component {
   deleteJob = (index) => {
     const previousEmployment = this.state.employmentInfo
     previousEmployment.splice(index,1)
-    console.log(previousEmployment)
     this.setState({
       employment:
         previousEmployment
@@ -304,12 +302,10 @@ class Main extends Component {
   //Education Editting
   editEducation = (e, index) => {
     const previousEducation = this.state.education
-    console.log(previousEducation)
     const schoolToEdit = previousEducation[index]
     schoolToEdit[e.target.name] = e.target.value
     previousEducation[index] = schoolToEdit
 
-    console.log(previousEducation)
     this.setState({
       education: 
         previousEducation
@@ -325,7 +321,6 @@ class Main extends Component {
   addNewEducation = (index) => {
     const previousEducation = this.state.education
     previousEducation.push([])
-    console.log(previousEducation, index)
     this.setState({
       education: previousEducation
     })
