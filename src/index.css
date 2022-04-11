@@ -142,6 +142,10 @@ textArea {
 }
 
 .editTabActive {
+  transform: translateX(8px);
+}
+
+.editTabActive {
   background-color: black;
   color: white;
 }

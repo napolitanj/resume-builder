@@ -34,7 +34,8 @@ class AddWebsite extends Component {
             pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
             title="mywebsite.com, www.mywebsite.org, https://website.net"    
             placeholder="Enter URL" 
-            value={this.state.url} 
+            value={this.state.url}
+            maxLength="35"
             onChange={(e) => this.setState({url:e.target.value})}
             />
             <input 
