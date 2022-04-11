@@ -28,7 +28,7 @@ class EditExperience extends Component {
                             style={{color:'gray',cursor:'pointer'}} onClick={() => removeExpCategory(experienceProps.topics.indexOf(topic))} 
                         />
                     </div>
-                    <textarea type="text" maxLength="170" className="expInput" defaultValue={topic.description} onChange={(e) => editTopicDescription(e,topic.id)}></textarea>
+                    <textarea type="text" maxLength="220" className="expInput" defaultValue={topic.description} onChange={(e) => editTopicDescription(e,topic.id)}></textarea>
                     <hr></hr>
                 </div>
             )}
