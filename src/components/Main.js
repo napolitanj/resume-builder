@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PreviewMode from './PreviewMode'
 import EditMode from './EditMode'
 import EditTab from './editComponents/EditTab'
+import jsPDF from 'jspdf'
 
 class Main extends Component {
   constructor(props) {
@@ -383,6 +384,15 @@ class Main extends Component {
     })
   }
 
+  generatePDF = () => {
+    var doc = new jsPDF('p','pt');
+    doc.text(20,20, 'this is the first title')
+    doc.addFont('helvetica','normal')
+    doc.text(20,60, 'this is the first title')
+    doc.text(20,100, 'this is the first title')
+    doc.save('demo.pdf')
+
+  }
 
   render() {
     return (
