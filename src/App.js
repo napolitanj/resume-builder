@@ -8,6 +8,11 @@ class App extends Component {
       <div className="App">
         <header className="header">
           <h1>Resume Builder</h1>
+          <div>
+            <p>Click the menu and select print (or ctrl+P) to save as a PDF.</p>
+            <p>Enable "Print Backgrounds" to add shaded text color if desired</p>
+            <p>You may need to adjust margins, depending on your browser.</p>
+          </div>
         </header>
         <Main/>
         <footer className="footer">
