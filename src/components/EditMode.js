@@ -97,7 +97,7 @@ class EditMode extends Component {
               changeSkill={changeSkill}
               deleteSkill={deleteSkill}
               addSkill={addSkill}
-              addSkillCategory={this.addSkillCategory}
+              addSkillCategory={addSkillCategory}
               changeTitle={changeTitle}
               deleteSkillCategory={deleteSkillCategory}
               />

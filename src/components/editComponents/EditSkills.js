@@ -15,7 +15,7 @@ export default class EditSkills extends Component {
                 <div className="editExpCategory">
                     <h3>Category title</h3>
                     <input
-                    maxLength="25" 
+                    maxLength="30" 
                     value={category.title} 
                     onChange={(e) => changeTitle(e,mainProps.skills.indexOf(category))}></input>
                     <div style={{
@@ -29,7 +29,7 @@ export default class EditSkills extends Component {
                     </div>
                     {category.skillList.map(skill =>
                         <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-                            <input maxLength="25" value={skill} onChange={(e) => changeSkill(e,mainProps.skills.indexOf(category),category.skillList.indexOf(skill))}></input>
+                            <input maxLength="32" value={skill} onChange={(e) => changeSkill(e,mainProps.skills.indexOf(category),category.skillList.indexOf(skill))}></input>
                             <FaTimes style={{color:'gray',cursor:'pointer'}} onClick={() => deleteSkill(mainProps.skills.indexOf(category),category.skillList.indexOf(skill))} 
                         />
                         </div>
