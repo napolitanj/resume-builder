@@ -104,7 +104,7 @@ class Main extends Component {
         },
         {
           title: "Tools",
-          skillList: ["Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github","Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github"]
+          skillList: ["Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Github","Gmail","Microsoft Office","Figma","Canva","Squarespace","Wordpress","Git","Github"]
         },
         {
           title: "Other Relevant Skills for This Job",
