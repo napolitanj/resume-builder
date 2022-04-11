@@ -110,7 +110,7 @@ textArea {
   display: flex;
   flex-direction: column;
   height: auto;
-  width: auto;
+  width: 250px;
   padding: 10px;
   gap: 10px;
   line-height: 10px;
