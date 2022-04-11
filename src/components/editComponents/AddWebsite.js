@@ -31,8 +31,6 @@ class AddWebsite extends Component {
         <form onSubmit={onSubmit} className="addWeb">
             <input 
             type="text"
-            pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
-            title="mywebsite.com, www.mywebsite.org, https://website.net"    
             placeholder="Enter URL" 
             value={this.state.url}
             maxLength="35"
